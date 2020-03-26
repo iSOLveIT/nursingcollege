@@ -1,0 +1,188 @@
+/*custom font*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(animation.css);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html, body{
+    width:100%;
+}
+html{
+    height:100vh;
+}
+body{
+    font-family: montserrat, arial, verdana;
+    background-color: #ffffff;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #222;
+    text-align: left;
+}
+div{
+    display: block;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1.125rem;
+}
+
+.navbar{
+    padding: 1rem 1rem;
+    background-color: #000033;
+    color:#fff !important;
+}
+
+.main_content{
+    background-color: #f0f0f0;
+    height: 100%;
+    padding: 1rem;
+}
+.quizQuestion{
+    background-color: #fff;
+    padding: .5rem;
+}
+.row{
+    margin:1rem 0  1rem 0;
+}
+.mb-4, .my-4 {
+    margin-bottom: 1.6875rem!important;
+}
+.mt-4, .my-4 {
+    margin-top: 1.6875rem!important;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.quizitem {
+    transition: box-shadow .2s;
+    transition: transform .2s;
+    cursor: pointer;
+}
+.mt-2, .my-2 {
+    margin-top: .5625rem!important;
+}
+.rounded {
+    border-radius: .25rem!important;
+}
+.border {
+    border: 1px solid #dee2e6!important;
+}
+.custom-control {
+    position: relative;
+    display: block;
+    min-height: 1.6875rem;
+    padding-left: 1.5rem;
+}
+.form-check {
+    position: relative;
+    display: block;
+    padding-left: 1.25rem;
+}
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.quizcontrol {
+    cursor: pointer;
+}
+.ml-3, .mx-3 {
+    margin-left: 1.125rem!important;
+}
+.custom-control-input {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.34375rem;
+    opacity: 0;
+}
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.mr-3, .mx-3 {
+    margin-right: 1.125rem!important;
+}
+.mt-3, .my-3 {
+    margin-top: 1.125rem!important;
+}
+.d-block {
+    display: block!important;
+}
+.custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+.custom-checkbox .custom-control-label::before {
+    border-radius: .25rem;
+}
+.custom-control-label::before, .custom-file-label, .custom-select {
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.custom-control-label::before {
+    position: absolute;
+    top: .34375rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    content: "";
+    background-color: #fff;
+    border: #adb5bd solid 1px;
+}
+.custom-control-label::after {
+    position: absolute;
+    top: .34375rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    background: no-repeat 50%/50% 50%;
+}
+@media (max-width: 1024px){
+    .login_section{
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        box-sizing: border-box;
+    }
+    .login_section .col{
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    display: block;
+    margin-top: auto;
+}
+.footer{
+    border-top: 1px solid rgba(0,0,0,.125);
+    width: 100%;
+    height: auto;
+    line-height: 30px;
+    padding-top: 2rem;
+}
