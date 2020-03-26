@@ -164,7 +164,70 @@ label {
         margin-bottom: 2rem;
     }
 }
-
+/* Carousel Header Text Styles */
+.header-text {
+    position: absolute;
+    top: 20%;
+    left: 1.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fff;
+  }
+  
+  .header-text h1 {
+    font-size: 65px;
+    font-weight: 300;
+  }
+  
+  .header-text h5 {
+    font-size: 28px;
+  }
+  .header-text h1 span {
+    line-height: 80px;
+    padding: 0;
+  }
+  
+  .header-text h5 span {
+    line-height: 80px;
+    padding: 0;
+  }
+  
+  @media (max-width: 1024px){
+    .header-text {
+      position: absolute;
+      top: 20%;
+      left: 1.8%;
+      right: auto;
+      width: inherit;
+      color: #fff;
+    }
+    
+    .header-text h1 {
+      font-size: 24pt;
+      font-weight: 400;
+    }
+    
+    .header-text h5 {
+      font-weight: 300;
+      font-size: 12pt;
+    }
+    .header-text h1 span {
+      line-height: 10px;
+      padding: 0;
+    }
+    
+    .header-text h5 span {
+      line-height: 20px;
+      padding: 0;
+    }
+    /*carousel img*/
+    .slide_img{
+      height: 350px;
+    }
+    
+  }
+  
+  
 
 
 
