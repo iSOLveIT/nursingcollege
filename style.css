@@ -224,10 +224,25 @@ label {
     .slide_img{
       height: 350px;
     }
-    
   }
+.user_detail{
+    margin-right: 2rem;
+}  
+@media (max-width: 1024px){
+    .user_detail{
+        margin-right: 0;
+        margin-bottom: .5rem;
+    } 
+}  
+.user_detail li:first-child{
+    background-color: #000033;
+    color:#fff;
+}
+.bread_selected{
+    font-weight: bolder;
+}
   
-  
+
 
 
 
