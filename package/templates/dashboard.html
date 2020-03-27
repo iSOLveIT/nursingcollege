@@ -1,144 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Page</title>
+{% extends 'layout.html' %}
 
-    <!--CSS IMPORTS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="icomoon.css">
-</head>
-<body>
-    <!--Navigation-->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#" style="color:#fff;">
-                <!--<img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
-                E-LEARNING
-            </a>
-            <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon" ></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active" >
-                  <a class="nav-link" href="#"style="color:#fff;">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#"style="color:#fff;">Dashboard</a>
-                </li>
-                <li class="nav-item dropdown active">
-                  <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    My Courses
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Course 1</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Course 2</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Course 3</a>
-                  </div>
-                </li>
-              </ul>
+{% block title %}
+    <title>Dashboard</title>
+{% endblock %}
 
-              <div class="form-inline my-2 my-lg-0">
-                  <span class="icon-user-circle-o" style="font-size: 16pt;"></span>
-                  <li class="nav-item dropdown active" style="list-style: none;">
-                    <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      DUODU RANDY
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#"><span class="icon-link2"></span> Link 1</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#"><span class="icon-settings"></span> Preferrences</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#"><span class="icon-exit_to_app"></span> Logout</a>
-                    </div>
-                  </li>
+{% block content %}
+  <!--Navigation-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#" style="color:#fff;">
+            <!--<img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
+            E-LEARNING
+        </a>
+        <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" ></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" >
+              <a class="nav-link" href="#"style="color:#fff;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"style="color:#fff;">Dashboard</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Courses
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Course 1</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Course 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Course 3</a>
+              </div>
+            </li>
+          </ul>
+
+          <div class="form-inline my-2 my-lg-0">
+              <span class="icon-user-circle-o" style="font-size: 16pt;"></span>
+              <li class="nav-item dropdown active" style="list-style: none;">
+                <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  DUODU RANDY
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#"><span class="icon-link2"></span> Link 1</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"><span class="icon-settings"></span> Preferrences</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"><span class="icon-exit_to_app"></span> Logout</a>
                 </div>
+              </li>
             </div>
         </div>
-    </nav>
-    <!--Content-->
-    <div class="main_content container">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb" style="background-color: #f18900ce; color:#fff;">
-              <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-dashboard2"></span> Dashboard</a></li>
-                <li class="breadcrumb-item bread_selected"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-class"></span> My Courses</a></li>
-            </ol>
-          </nav>
-            <div class="row container login_section">
-                <div class="col-12">
-                    <ul class="list-group list-group-horizontal-lg">
-                        <ul class="list-group user_detail">
-                            <li class="list-group-item rounded">DEPARTMENT</li>
-                            <li class="list-group-item border">Faculty of Information Technology and Communication Studies</li>    
-                          </ul>
-                          <ul class="list-group user_detail">
-                            <li class="list-group-item rounded">PROGRAMME</li>
-                            <li class="list-group-item border">Information Technology Management</li>    
-                          </ul>
-                          <ul class="list-group user_detail">
-                            <li class="list-group-item rounded">LEVEL</li>
-                            <li class="list-group-item border">300</li>    
-                          </ul>
+    </div>
+</nav>
+<!--Content-->
+<div class="main_content container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="background-color: #f18900ce; color:#fff;">
+          <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-dashboard2"></span> Dashboard</a></li>
+            <li class="breadcrumb-item bread_selected"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-class"></span> My Courses</a></li>
+        </ol>
+      </nav>
+        <div class="row container login_section">
+            <div class="col-12">
+                <ul class="list-group list-group-horizontal-lg">
+                    <ul class="list-group user_detail">
+                        <li class="list-group-item rounded">DEPARTMENT</li>
+                        <li class="list-group-item border">Faculty of Information Technology and Communication Studies</li>    
                       </ul>
-                </div>
+                      <ul class="list-group user_detail">
+                        <li class="list-group-item rounded">PROGRAMME</li>
+                        <li class="list-group-item border">Information Technology Management</li>    
+                      </ul>
+                      <ul class="list-group user_detail">
+                        <li class="list-group-item rounded">LEVEL</li>
+                        <li class="list-group-item border">300</li>    
+                      </ul>
+                  </ul>
             </div>
-            <div class="quizQuestion rounded border container mt-3">
-                <div class="row">
-                    <div class="col card-header border" style="font-size: 16pt; font-weight: bolder;">
-                        <span class="icon-menu"></span>
-                        Courses Overview
+        </div>
+        <div class="quizQuestion rounded border container mt-3">
+            <div class="row">
+                <div class="col card-header border" style="font-size: 16pt; font-weight: bolder;">
+                    <span class="icon-menu"></span>
+                    Courses Overview
+                  </div>
+            </div>
+            <div class="row ">
+                <div class="col">
+                    <div class="card">
+                            <img src="https://images.unsplash.com/photo-1581492765274-38bb30a15121?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title"><a href="#" style="color:#000033;">Course Name</a></h5>
+                              <p class="card-text">Course Code</p>
+                              <p class="card-text"><small class="text-muted">LEVEL 200</small></p>
+                            </div>
                       </div>
                 </div>
-                <div class="row ">
-                    <div class="col">
-                        <div class="card">
-                                <img src="https://images.unsplash.com/photo-1581492765274-38bb30a15121?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title"><a href="#" style="color:#000033;">Course Name</a></h5>
-                                  <p class="card-text">Course Code</p>
-                                  <p class="card-text"><small class="text-muted">LEVEL 200</small></p>
-                                </div>
-                          </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                                <img src="https://images.unsplash.com/photo-1581492765274-38bb30a15121?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="#" style="color:#000033;">Course Name</a></h5>
-                                    <p class="card-text">Course Code</p>
-                                  <p class="card-text"><small class="text-muted">LEVEL 200</small></p>
-                                </div>
-                          </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                                <img src="https://images.unsplash.com/photo-1581492765274-38bb30a15121?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="#" style="color:#000033;">Course Name</a></h5>
-                                    <p class="card-text">Course Code</p>
-                                  <p class="card-text"><small class="text-muted">LEVEL 200</small></p>
-                                </div>
-                          </div>
-                    </div>
+                <div class="col">
+                    <div class="card">
+                            <img src="https://images.unsplash.com/photo-1581492765274-38bb30a15121?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="#" style="color:#000033;">Course Name</a></h5>
+                                <p class="card-text">Course Code</p>
+                              <p class="card-text"><small class="text-muted">LEVEL 200</small></p>
+                            </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                            <img src="https://images.unsplash.com/photo-1581492765274-38bb30a15121?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="#" style="color:#000033;">Course Name</a></h5>
+                                <p class="card-text">Course Code</p>
+                              <p class="card-text"><small class="text-muted">LEVEL 200</small></p>
+                            </div>
+                      </div>
                 </div>
             </div>
-    </div>
-    
-    <footer class="footer">
-        <div class="container">
-            <p class="text-center text-muted">© 2012–2020 E-Learning | <a style="text-decoration: none; color:inherit;" href="#">Privacy Policy</a>
         </div>
-    </footer>
-    <!--JAVASCRIPT IMPORTS-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-</body>
-</html>
+</div>
+{% endblock %}

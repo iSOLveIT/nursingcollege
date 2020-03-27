@@ -1,182 +1,167 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Page</title>
+{% extends 'layout.html' %}
 
-    <!--CSS IMPORTS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/icomoon.css">
-</head>
-<body>
-    <!--Navigation-->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#" style="color:#fff;">
-                <!--<img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
-                E-LEARNING
-            </a>
-            <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon" ></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active" >
-                  <a class="nav-link" href="#"style="color:#fff;">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#"style="color:#fff;">Link</a>
-                </li>
-                <li class="nav-item dropdown active">
-                  <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+{% block title %}
+    <title>Homes Page</title>
+{% endblock %}
+
+{% block content %}
+     <!--Navigation-->
+     <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+      <div class="container">
+          <a class="navbar-brand" href="#" style="color:#fff;">
+              <!--<img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
+              E-LEARNING
+          </a>
+          <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" ></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active" >
+                <a class="nav-link" href="#"style="color:#fff;">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#"style="color:#fff;">Link</a>
+              </li>
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            </ul>
+            
+          </div>
+      </div>
+  </nav>
+  
+   <!--Carousel-->
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-wrap="true" data-touch="true">
+      <div class="carousel-inner">
+      <div class="carousel-item active" data-interval="5000">
+          <img src="http://cloe-brooks.themerex.net/wp-content/uploads/revslider/home-1/slide1.jpg"
+          class="d-block w-100 slide_img" alt="First Slide" height="450px">
+          <!-- Static Header -->
+          <div class="header-text hidden-xs">
+          <div class="col-md-12 text-left">
+              <h1>
+              <span>Helping People Gain </span>
+              </h1>
+              <br>
+              <h1>
+              <span>Power in Their Life</span>
+              </h1>
+              <br>
+              <div style="padding-top:10px;">
+              <a href="#" target="_blank" class="bg-info"
+                  style="color:#ffffff;border-radius: 1.66em; display: inline-block;text-decoration: none; padding: 1em 2em;background-color: #72b5ca;">
+                  More information
+              </a>
+              </div>
+          </div>
+          </div><!-- /header-text -->
+      </div>
+      <div class="carousel-item" data-interval="5000">
+          <img src="http://cloe-brooks.themerex.net/wp-content/uploads/revslider/home-1/slide1.jpg"
+          class="d-block w-100 slide_img" alt="Second Slide" height="450px">
+          <!-- Static Header -->
+          <div class="header-text hidden-xs">
+          <div class="col-md-12 text-center">
+              <h1>
+              <span>We Can Do Small Things</span>
+              </h1>
+              <br>
+              <h1>
+              <span>With Great Love</span>
+              </h1>
+              <br>
+              <div style="padding-top:10px;">
+              <a href="#" target="_blank" class="bg-info"
+                  style="color:#ffffff;border-radius: 1.66em; display: inline-block;text-decoration: none; padding: 1em 2em;background-color: #72b5ca;">
+                  More Information
+              </a>
+              </div>
+          </div>
+          </div><!-- /header-text -->
+      </div>
+      <div class="carousel-item" data-interval="5000">
+          <img src="http://cloe-brooks.themerex.net/wp-content/uploads/revslider/home-1/slide1.jpg"
+          class="d-block w-100 slide_img" alt="Third Slide" height="450px">
+          <!-- Static Header -->
+          <div class="header-text hidden-xs">
+          <div class="col-md-12 text-left">
+              <h1>
+              <span>Improve Your Life</span>
+              </h1>
+              <br>
+              <h5>
+              <span>Relate to each other from the best in you...</span>
+              </h5>
+              <br>
+              <div style="padding-top:10px;">
+              <a href="#" target="_blank" class="bg-info"
+                  style="color:#ffffff;border-radius: 1.66em; display: inline-block;text-decoration: none; padding: 1em 2em;background-color: #72b5ca;">
+                  More information
+              </a>
+              </div>
+          </div>
+          </div><!-- /header-text -->
+      </div>
+      </div>
+
+  </div>
+  <!--Content-->
+  <div class="main_content container" style="margin: 2rem auto;">
+      <div class="row">
+          <h2 class="col-5">Login</h2>
+      </div>
+      <div class="row rounded border container login_section" style="padding: 1rem; background-color: #fff;">
+          <div class="col" >
+              <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">ID Number</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                   </div>
-                </li>
-              </ul>
-              
-            </div>
-        </div>
-    </nav>
-    
-     <!--Carousel-->
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-wrap="true" data-touch="true">
-        <div class="carousel-inner">
-        <div class="carousel-item active" data-interval="5000">
-            <img src="http://cloe-brooks.themerex.net/wp-content/uploads/revslider/home-1/slide1.jpg"
-            class="d-block w-100 slide_img" alt="First Slide" height="450px">
-            <!-- Static Header -->
-            <div class="header-text hidden-xs">
-            <div class="col-md-12 text-left">
-                <h1>
-                <span>Helping People Gain </span>
-                </h1>
-                <br>
-                <h1>
-                <span>Power in Their Life</span>
-                </h1>
-                <br>
-                <div style="padding-top:10px;">
-                <a href="#" target="_blank" class="bg-info"
-                    style="color:#ffffff;border-radius: 1.66em; display: inline-block;text-decoration: none; padding: 1em 2em;background-color: #72b5ca;">
-                    More information
-                </a>
-                </div>
-            </div>
-            </div><!-- /header-text -->
-        </div>
-        <div class="carousel-item" data-interval="5000">
-            <img src="http://cloe-brooks.themerex.net/wp-content/uploads/revslider/home-1/slide1.jpg"
-            class="d-block w-100 slide_img" alt="Second Slide" height="450px">
-            <!-- Static Header -->
-            <div class="header-text hidden-xs">
-            <div class="col-md-12 text-center">
-                <h1>
-                <span>We Can Do Small Things</span>
-                </h1>
-                <br>
-                <h1>
-                <span>With Great Love</span>
-                </h1>
-                <br>
-                <div style="padding-top:10px;">
-                <a href="#" target="_blank" class="bg-info"
-                    style="color:#ffffff;border-radius: 1.66em; display: inline-block;text-decoration: none; padding: 1em 2em;background-color: #72b5ca;">
-                    More Information
-                </a>
-                </div>
-            </div>
-            </div><!-- /header-text -->
-        </div>
-        <div class="carousel-item" data-interval="5000">
-            <img src="http://cloe-brooks.themerex.net/wp-content/uploads/revslider/home-1/slide1.jpg"
-            class="d-block w-100 slide_img" alt="Third Slide" height="450px">
-            <!-- Static Header -->
-            <div class="header-text hidden-xs">
-            <div class="col-md-12 text-left">
-                <h1>
-                <span>Improve Your Life</span>
-                </h1>
-                <br>
-                <h5>
-                <span>Relate to each other from the best in you...</span>
-                </h5>
-                <br>
-                <div style="padding-top:10px;">
-                <a href="#" target="_blank" class="bg-info"
-                    style="color:#ffffff;border-radius: 1.66em; display: inline-block;text-decoration: none; padding: 1em 2em;background-color: #72b5ca;">
-                    More information
-                </a>
-                </div>
-            </div>
-            </div><!-- /header-text -->
-        </div>
-        </div>
-
-    </div>
-    <!--Content-->
-    <div class="main_content container" style="margin: 2rem auto;">
-        <div class="row">
-            <h2 class="col-5">Login</h2>
-        </div>
-        <div class="row rounded border container login_section" style="padding: 1rem; background-color: #fff;">
-            <div class="col" >
-                <form>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">ID Number</label>
-                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Remember ID Number</label>
-                    </div>
-                    <button type="submit" class="btn btn-outline-warning">Login</button>
-                    <div>
-                        <a href="#" style="color:#000033;">Forgot Password?</a>
-                    </div>
-                  </form>
-            </div>
-            <div class="col" >
-                <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title text-uppercase">Have Questions</h5>
-                      <p class="card-text" style="font-weight: bolder; color:#f18900;">
-                        <span class="icon-question-circle" style="font-size:18pt;"></span>
-                        <a href="#" style="color:#000033;">Report your login problems here!</a>
-                    </p>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember ID Number</label>
+                  </div>
+                  <button type="submit" class="btn btn-outline-warning">Login</button>
+                  <div>
+                      <a href="#" style="color:#000033;">Forgot Password?</a>
+                  </div>
+                </form>
+          </div>
+          <div class="col" >
+              <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title text-uppercase">Have Questions</h5>
                     <p class="card-text" style="font-weight: bolder; color:#f18900;">
-                        <span class="icon-link2" style="font-size:18pt;"></span>
-                        <a href="#" style="color:#000033;">Access online resources here</a>
-                    </p>
-                    </div>
+                      <span class="icon-question-circle" style="font-size:18pt;"></span>
+                      <a href="#" style="color:#000033;">Report your login problems here!</a>
+                  </p>
+                  <p class="card-text" style="font-weight: bolder; color:#f18900;">
+                      <span class="icon-link2" style="font-size:18pt;"></span>
+                      <a href="#" style="color:#000033;">Access online resources here</a>
+                  </p>
                   </div>
-            </div>
-        </div>
-    </div>
-    
-    
-    
-    <footer class="footer">
-        <div class="container">
-            <p class="text-center text-muted">© 2012–2020 E-Learning | <a style="text-decoration: none; color:inherit;" href="#">Privacy Policy</a>
-        </div>
-    </footer>
-    <!--JAVASCRIPT IMPORTS-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="static/js/main.js"></script>
-</body>
-</html>
+                </div>
+          </div>
+      </div>
+  </div>
+  
+  
+{% endblock %}
+
+
+

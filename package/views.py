@@ -53,7 +53,7 @@ class CoursesEndpoint(MethodView):
     Returns:
         none
     """
-    def get(self):
+    def get(self, course_code):
         """This function executes when request method for this route = get
         
         Returns:
@@ -71,7 +71,7 @@ class ExamdetailsEndpoint(MethodView):
     Returns:
         none
     """
-    def get(self):
+    def get(self, course_code, exam_code):
         """This function executes when request method for this route = get
         
         Returns:
@@ -89,7 +89,7 @@ class ExamEndpoint(MethodView):
     Returns:
         none
     """
-    def get(self):
+    def get(self, course_code, exam_code):
         """This function executes when request method for this route = get
         
         Returns:

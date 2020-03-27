@@ -1,126 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Page</title>
+{% extends 'layout.html' %}
 
-    <!--CSS IMPORTS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!--Navigation-->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#" style="color:#fff;">
-                <!--<img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
-                E-LEARNING
-            </a>
-            <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon" ></span>
-            </button>
+{% block title %}
+    <title>Exam Page</title>
+{% endblock %}
+
+{% block content %}
+  <!--Navigation-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#" style="color:#fff;">
+            <!--<img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
+            E-LEARNING
+        </a>
+        <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" ></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" >
+              <a class="nav-link" href="#"style="color:#fff;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"style="color:#fff;">Link</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
           
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active" >
-                  <a class="nav-link" href="#"style="color:#fff;">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#"style="color:#fff;">Link</a>
-                </li>
-                <li class="nav-item dropdown active">
-                  <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-              </ul>
-              
-            </div>
         </div>
-    </nav>
-    <!--Content-->
-    <div class="main_content container">
-        <form action="" method="GET">
-            <div class="row quizQuestion rounded border container">
-                <div class=" col-12">
-                    <div class="my-4">
-                        <p>Q1) Given the file <code>dog_breeds.txt</code>, which of the following is the correct
-                        way to open the file for reading as a <strong>text file</strong>? Select all that apply.</p>
-                    </div>
-                    <div class="quizCardForm">
-                        <div class="form-group">
-                            <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
-                                <input class="custom-control-input ml-3 quizcontrol" type="checkbox" name="answer" id="idx-ch1" value="ch1" autofocus="">
-                                <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch1"><p>(A) <code>open('dog_breeds.txt')</code></p></label>
-                            </div>
-                            <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
-                                <input class="custom-control-input ml-3 quizcontrol" type="checkbox" name="answer" id="idx-ch4" value="ch4">
-                                <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch4"><p>(B) <code>open('dog_breeds.txt', 'wb')</code></p></label>
-                            </div>
-                            <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
-                                <input class="custom-control-input ml-3 quizcontrol" type="checkbox" name="answer" id="idx-ch3" value="ch3">
-                                <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch3"><p>(C) <code>open('dog_breeds.txt', 'rb')</code></p></label>
-                            </div>
-                            <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
-                                <input class="custom-control-input ml-3 quizcontrol" type="checkbox" name="answer" id="idx-ch2" value="ch2">
-                                <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch2"><p>(D) <code>open('dog_breeds.txt', 'w')</code></p></label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row quizQuestion rounded border container">
-                <div class=" col-12">
-                    <div class="my-4">
-                        <p>Q2) Given the file <code>dog_breeds.txt</code>, which of the following is the correct
-                        way to open the file for reading as a <strong>text file</strong>? Select all that apply.</p>
-                    </div>
-                    <div  class="quizCardForm">
-                        <div class="form-group">
-                            <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
-                                <input class="custom-control-input ml-3 quizcontrol" type="radio" name="q2answer" id="idx-ch5" value="1" autofocus="">
-                                <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch5"><p>(A) <code>open('dog_breeds.txt')</code></p></label>
-                            </div>
-                            <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
-                                <input class="custom-control-input ml-3 quizcontrol" type="radio" name="q2answer" id="idx-ch6" value="2">
-                                <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch6"><p>(B) <code>open('dog_breeds.txt', 'wb')</code></p></label>
-                            </div>
-                            <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
-                                <input class="custom-control-input ml-3 quizcontrol" type="radio" name="q2answer" id="idx-ch7" value="3">
-                                <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch7"><p>(C) <code>open('dog_breeds.txt', 'rb')</code></p></label>
-                            </div>
-                            <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
-                                <input class="custom-control-input ml-3 quizcontrol" type="radio" name="q2answer" id="idx-ch8" value="4">
-                                <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch8"><p>(D) <code>open('dog_breeds.txt', 'w')</code></p></label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="quizControl">
-                <button type="submit" class="btn btn-outline-success">Submit</button>
-            </div>
-        </form>
     </div>
-    
-    
-    
-    <footer class="footer">
-        <div class="container">
-            <p class="text-center text-muted">© 2012–2020 E-Learning | <a style="text-decoration: none; color:inherit;" href="#">Privacy Policy</a>
+</nav>
+<!--Content-->
+<div class="main_content container">
+    <form action="" method="GET">
+        <div class="row quizQuestion rounded border container">
+            <div class=" col-12">
+                <div class="my-4">
+                    <p>Q1) Given the file <code>dog_breeds.txt</code>, which of the following is the correct
+                    way to open the file for reading as a <strong>text file</strong>? Select all that apply.</p>
+                </div>
+                <div class="quizCardForm">
+                    <div class="form-group">
+                        <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
+                            <input class="custom-control-input ml-3 quizcontrol" type="checkbox" name="answer" id="idx-ch1" value="ch1" autofocus="">
+                            <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch1"><p>(A) <code>open('dog_breeds.txt')</code></p></label>
+                        </div>
+                        <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
+                            <input class="custom-control-input ml-3 quizcontrol" type="checkbox" name="answer" id="idx-ch4" value="ch4">
+                            <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch4"><p>(B) <code>open('dog_breeds.txt', 'wb')</code></p></label>
+                        </div>
+                        <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
+                            <input class="custom-control-input ml-3 quizcontrol" type="checkbox" name="answer" id="idx-ch3" value="ch3">
+                            <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch3"><p>(C) <code>open('dog_breeds.txt', 'rb')</code></p></label>
+                        </div>
+                        <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
+                            <input class="custom-control-input ml-3 quizcontrol" type="checkbox" name="answer" id="idx-ch2" value="ch2">
+                            <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch2"><p>(D) <code>open('dog_breeds.txt', 'w')</code></p></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-    <!--JAVASCRIPT IMPORTS-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-</body>
-</html>
+        <div class="row quizQuestion rounded border container">
+            <div class=" col-12">
+                <div class="my-4">
+                    <p>Q2) Given the file <code>dog_breeds.txt</code>, which of the following is the correct
+                    way to open the file for reading as a <strong>text file</strong>? Select all that apply.</p>
+                </div>
+                <div  class="quizCardForm">
+                    <div class="form-group">
+                        <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
+                            <input class="custom-control-input ml-3 quizcontrol" type="radio" name="q2answer" id="idx-ch5" value="1" autofocus="">
+                            <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch5"><p>(A) <code>open('dog_breeds.txt')</code></p></label>
+                        </div>
+                        <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
+                            <input class="custom-control-input ml-3 quizcontrol" type="radio" name="q2answer" id="idx-ch6" value="2">
+                            <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch6"><p>(B) <code>open('dog_breeds.txt', 'wb')</code></p></label>
+                        </div>
+                        <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
+                            <input class="custom-control-input ml-3 quizcontrol" type="radio" name="q2answer" id="idx-ch7" value="3">
+                            <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch7"><p>(C) <code>open('dog_breeds.txt', 'rb')</code></p></label>
+                        </div>
+                        <div class="form-check custom-control custom-checkbox mt-2 rounded border quizitem">
+                            <input class="custom-control-input ml-3 quizcontrol" type="radio" name="q2answer" id="idx-ch8" value="4">
+                            <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="idx-ch8"><p>(D) <code>open('dog_breeds.txt', 'w')</code></p></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quizControl">
+            <button type="submit" class="btn btn-outline-success">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
