@@ -6,7 +6,7 @@ from package import app
 app.add_url_rule("/", view_func=IndexEndpoint.as_view("index"))
 
 # Route for dashboard
-app.add_url_rule("/dashboard", view_func=DashboardEndpoint.as_view("dashboard"))
+app.add_url_rule("/dashboard/<string:user_id>", view_func=DashboardEndpoint.as_view("dashboard"))
 
 # Route for My Courses
 app.add_url_rule("/courses/<string:course_code>", view_func=CoursesEndpoint.as_view("courses"))

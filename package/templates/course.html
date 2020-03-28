@@ -29,11 +29,10 @@
                 My Courses
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Course 1</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Course 2</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Course 3</a>
+                {% for item in session.get('course_details') %}
+                  <a class="dropdown-item" href="#">{{ item['courseCode'] }}</a>
+                  <div class="dropdown-divider"></div>
+                {% endfor %}
               </div>
             </li>
           </ul>
@@ -42,7 +41,7 @@
               <span class="icon-user-circle-o" style="font-size: 16pt;"></span>
               <li class="nav-item dropdown active" style="list-style: none;">
                 <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  DUODU RANDY
+                  {{ session.username }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="#"><span class="icon-link2"></span> Link 1</a>
@@ -62,14 +61,14 @@
         <ol class="breadcrumb" style="background-color: #f18900ce; color:#fff;">
           <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-dashboard2"></span> Dashboard</a></li>
             <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-class"></span> My Courses</a></li>
-            <li class="breadcrumb-item bread_selected"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-book"></span> [Course Name]</a></li>
+            <li class="breadcrumb-item bread_selected"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-book"></span> {{ course_detail['courseCode'] }}</a></li>
         </ol>
       </nav>
         <div class="row container login_section">
             <div class="col-12">
                 <h2>Welcome</h2>
                 <p class="text-monospace">
-                  [Description] This course will provide you with all of the essentials to become a successful frontend web developer. You will learn to master HTML, CSS and front end JavaScript, along with tools like Git, VSCode and front end frameworks like Vue.
+                  {{ course_detail['description'] }}
                 </p>
             </div>
         </div>
@@ -77,7 +76,7 @@
             <div class="row">
                 <div class="col card-header border" style="font-size: 16pt; font-weight: bolder;">
                     <span class="icon-menu"></span>
-                    [Course Name] Examination 
+                    {{ course_detail['courseName'] }} Examination 
                   </div>
             </div>
             <div class="row ">

@@ -1,6 +1,9 @@
 # Third-party modules
 from flask.views import MethodView
-from flask import render_template, request, redirect, url_for, flash
+from flask import render_template, request, redirect, url_for, flash, session
+
+# Local modules
+from package.read_json import  course_db
 
 
 class IndexEndpoint(MethodView):
@@ -27,7 +30,7 @@ class IndexEndpoint(MethodView):
 
 
 class DashboardEndpoint(MethodView):
-    """View for Index Route
+    """View for Dashboard Route
     
     Arguments:
         MethodView -- If you implement a request method (like GET), it will be used to handle GET requests.
@@ -35,13 +38,21 @@ class DashboardEndpoint(MethodView):
     Returns:
         none
     """
-    def get(self):
+    def get(self, user_id):
         """This function executes when request method for this route = get
         
         Returns:
             html template -- renders html template
         """
-        return render_template('dashboard.html'), 200
+        data = course_db()
+        content = []
+        for item in data:
+            if item['user'] == user_id:
+                username = item['username']
+                content.append(item)
+                session['username'] = username
+        session['course_details'] = content
+        return render_template('dashboard.html', username=username, course_details=content), 200
 
 
 class CoursesEndpoint(MethodView):
@@ -59,7 +70,11 @@ class CoursesEndpoint(MethodView):
         Returns:
             html template -- renders html template
         """
-        return render_template('course.html'), 200
+        content = session.get('course_details')
+        for item in content:
+            if item['courseCode'] == course_code:
+                course_detail = item
+        return render_template('course.html', course_detail=course_detail), 200
 
 
 class ExamdetailsEndpoint(MethodView):
