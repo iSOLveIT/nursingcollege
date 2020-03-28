@@ -56,7 +56,7 @@ class DashboardEndpoint(MethodView):
 
 
 class CoursesEndpoint(MethodView):
-    """View for Index Route
+    """View for Course Route
     
     Arguments:
         MethodView -- If you implement a request method (like GET), it will be used to handle GET requests.
@@ -78,7 +78,7 @@ class CoursesEndpoint(MethodView):
 
 
 class ExamdetailsEndpoint(MethodView):
-    """View for Index Route
+    """View for Exam Details Route
     
     Arguments:
         MethodView -- If you implement a request method (like GET), it will be used to handle GET requests.
@@ -96,7 +96,7 @@ class ExamdetailsEndpoint(MethodView):
 
 
 class ExamEndpoint(MethodView):
-    """View for Index Route
+    """View for Exam Route
     
     Arguments:
         MethodView -- If you implement a request method (like GET), it will be used to handle GET requests.
