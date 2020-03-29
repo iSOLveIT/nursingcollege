@@ -76,7 +76,14 @@
     "courseCode": "IO-12",
     "courseName": "IOS Development",
     "description": "Get started building mobile applications for IOS using Swift and other tools",
-    "question": "5d725a1b7b292f5f8ceff788",
+    "user": "5c8a1d5b0190b214360dc033",
+    "username": "Tetteh Agnes"
+  },
+  {
+    "_id": "5d725cfec4ded7bcb480eaa8",
+    "courseCode": "INT-202",
+    "courseName": "Introduction to Information Technology",
+    "description": "This course teaches the benefits and skills in IT",
     "user": "5c8a1d5b0190b214360dc033",
     "username": "Tetteh Agnes"
   }

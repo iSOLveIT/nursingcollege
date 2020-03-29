@@ -29,7 +29,7 @@
                 My Courses
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                {% for item in course_details %}
+                {% for item in session.get('course_details') %}
                   <a class="dropdown-item" href="#">{{ item['courseCode'] }}</a>
                   <div class="dropdown-divider"></div>
                 {% endfor %}
@@ -41,7 +41,7 @@
               <span class="icon-user-circle-o" style="font-size: 16pt;"></span>
               <li class="nav-item dropdown active" style="list-style: none;">
                 <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  {{username}}
+                  {{session.username}}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="#"><span class="icon-link2"></span> Link 1</a>
@@ -89,13 +89,13 @@
                   </div>
             </div>
             <div class="row ">
-              {% for item in course_details %}
+              {% for course in session.get('course_details') %}
                 <div class="col">
                     <div class="card">
                       <img src="https://images.unsplash.com/photo-1581492765274-38bb30a15121?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img" alt="...">
                       <div class="card-body">
-                        <h5 class="card-title"><a href="/courses/{{ item['courseCode'] }}" style="color:#000033;">{{item['courseName']}}</a></h5>
-                        <p class="card-text">{{ item['courseCode'] }}</p>
+                        <h5 class="card-title"><a href="/courses/{{ course['courseCode'] }}" style="color:#000033;">{{course['courseName']}}</a></h5>
+                        <p class="card-text">{{ course['courseCode'] }}</p>
                         <p class="card-text"><small class="text-muted">LEVEL 200</small></p>
                       </div>
                     </div>                    

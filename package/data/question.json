@@ -1,0 +1,1120 @@
+[
+  {
+    "examCode":"5e7bf109e8554c0de33bce2c",
+    "questions":[
+      {
+        "_id": "5e7bf109e8554c0de33bc001",
+        "description": "What does the statement below talk about? Besides using your personal computer to create word documents, you can now use your smartphone",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Convergent Technology"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Converted Technology"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Portable Technology"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Mobile Technology"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc002",
+        "description": "Which of the following is DIFFERENT from the other?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Instagram"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Twitter"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Instagram"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Flickr"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc003",
+        "description":
+          "Which of the following is an example of Social Networking site?",
+        "alternatives": [
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Google+"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Pinterest"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Plurk"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Reddit"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc004",
+        "description":
+          "In a database, Yes/No, Text and Date/Time are all examples of:",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "data types"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "data queries"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "tabs you can select"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "records in the data table"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc005",
+        "description":
+          "Which database component is used to organize information by data type?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Row"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Field"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Title"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Record"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc006",
+        "description": "What is another name for a table row in a database",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Record"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Field"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Column"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Heading"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc007",
+        "description":
+          "What can you use to retrieve specific data from a table within a database?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Field"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Column"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Query"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Record"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc008",
+        "description":
+          "What can you use to summarize and print data for presentation or sharing?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Query"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Report"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Column"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Heading"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc009",
+        "description": "Which language is used to develop and manage databases?",
+        "alternatives": [
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "SQL"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "HTML"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Java"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "DBMS"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc010",
+        "description":
+          "What does a database use to provide a simplified interface for the user to enter, modify and view database records?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Form"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Report"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Table"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Query"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc011",
+        "description": "In which of the following must the data be unique?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "The foreign key"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "The junction table"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "The common field"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "The primary key"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc012",
+        "description":
+          "Which database application would most likely be used in large organizations?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Excel"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "HTML"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Access"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Oracle"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc013",
+        "description": "Which data types is best for calculations?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "AutoNumber"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Currency"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Number"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "text"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc014",
+        "description": "How many characters are allowed in the text field?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Unlimited"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "1-9"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "1-255"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "More than 255"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc015",
+        "description": "What data type is used for monetary values?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Autonumber"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "General"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Accounting"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Currency"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc016",
+        "description": "What data type is used to provide links to other resources?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "What data type is used to provide links to other resources?"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Hyperlink"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "OLE Object"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "text"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc017",
+        "description": "What was the statement below talks about?Besides using your personal computer to create word documents, you can now use your smartphone",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Convergent Technology"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Converted Technology"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Portable Technology"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Mobile Technology"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc018",
+        "description": "What data type allows object linking and embedding?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Attachment"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Hyperlink"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "OLE Object"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "text"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc019",
+        "description": "There are ______________ data types in Access.",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "8"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "10"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "12"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "7"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc020",
+        "description": "What does SQL stand for?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Single Query Language"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Standard Query Language"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Simple Query Language"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Structured Query Language"
+          }
+        ]
+      },
+      {
+        "_id": "5e7bf109e8554c0de33bc021",
+        "description":
+          "The tables of information in a relational database are joined or linked to one another by a ______________ field",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "common"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "key"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "foreign"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "common"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "examCode":"5e7bf109e8554c0de33bce2d",
+    "questions":[
+      {
+        "_id": "Q1",
+        "description": "What does the statement below talk about? Besides using your personal computer to create word documents, you can now use your smartphone",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Convergent Technology"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Converted Technology"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Portable Technology"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Mobile Technology"
+          }
+        ]
+      },
+      {
+        "_id": "Q2",
+        "description": "Which of the following is DIFFERENT from the other?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Instagram"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Twitter"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Instagram"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Flickr"
+          }
+        ]
+      },
+      {
+        "_id": "Q3",
+        "description":
+          "Which of the following is an example of Social Networking site?",
+        "alternatives": [
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Google+"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Pinterest"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Plurk"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Reddit"
+          }
+        ]
+      },
+      {
+        "_id": "Q4",
+        "description":
+          "In a database, Yes/No, Text and Date/Time are all examples of:",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "data types"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "data queries"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "tabs you can select"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "records in the data table"
+          }
+        ]
+      },
+      {
+        "_id": "Q5",
+        "description":
+          "Which database component is used to organize information by data type?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Row"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Field"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Title"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Record"
+          }
+        ]
+      },
+      {
+        "_id": "Q6",
+        "description": "What is another name for a table row in a database",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Record"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Field"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Column"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Heading"
+          }
+        ]
+      },
+      {
+        "_id": "Q7",
+        "description":
+          "What can you use to retrieve specific data from a table within a database?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Field"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Column"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Query"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Record"
+          }
+        ]
+      },
+      {
+        "_id": "Q8",
+        "description":
+          "What can you use to summarize and print data for presentation or sharing?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Query"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Report"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Column"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Heading"
+          }
+        ]
+      },
+      {
+        "_id": "Q9",
+        "description": "Which language is used to develop and manage databases?",
+        "alternatives": [
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "SQL"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "HTML"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Java"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "DBMS"
+          }
+        ]
+      },
+      {
+        "_id": "Q10",
+        "description":
+          "What does a database use to provide a simplified interface for the user to enter, modify and view database records?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Form"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Report"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Table"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Query"
+          }
+        ]
+      },
+      {
+        "_id": "Q11",
+        "description": "In which of the following must the data be unique?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "The foreign key"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "The junction table"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "The common field"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "The primary key"
+          }
+        ]
+      },
+      {
+        "_id": "Q12",
+        "description":
+          "Which database application would most likely be used in large organizations?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Excel"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "HTML"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Access"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Oracle"
+          }
+        ]
+      },
+      {
+        "_id": "Q13",
+        "description": "Which data types is best for calculations?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "AutoNumber"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Currency"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Number"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "text"
+          }
+        ]
+      },
+      {
+        "_id": "Q14",
+        "description": "How many characters are allowed in the text field?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Unlimited"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "1-9"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "1-255"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "More than 255"
+          }
+        ]
+      },
+      {
+        "_id": "Q15",
+        "description": "What data type is used for monetary values?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Autonumber"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "General"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Accounting"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Currency"
+          }
+        ]
+      },
+      {
+        "_id": "Q16",
+        "description": "What data type is used to provide links to other resources?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "What data type is used to provide links to other resources?"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Hyperlink"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "OLE Object"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "text"
+          }
+        ]
+      },
+      {
+        "_id": "Q17",
+        "description": "What was the statement below talks about?Besides using your personal computer to create word documents, you can now use your smartphone",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Convergent Technology"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Converted Technology"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Portable Technology"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Mobile Technology"
+          }
+        ]
+      },
+      {
+        "_id": "Q18",
+        "description": "What data type allows object linking and embedding?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Attachment"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Hyperlink"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "OLE Object"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "text"
+          }
+        ]
+      },
+      {
+        "_id": "Q19",
+        "description": "There are ______________ data types in Access.",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "8"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "10"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "12"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "7"
+          }
+        ]
+      },
+      {
+        "_id": "Q20",
+        "description": "What does SQL stand for?",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "Single Query Language"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "Standard Query Language"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "Simple Query Language"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "Structured Query Language"
+          }
+        ]
+      },
+      {
+        "_id": "Q21",
+        "description":
+          "The tables of information in a relational database are joined or linked to one another by a ______________ field",
+        "alternatives": [
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2a",
+            "text": "common"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2b",
+            "text": "key"
+          },
+          {
+            "isCorrect": false,
+            "_id": "5e7bf109e8554c0de33bcf2c",
+            "text": "foreign"
+          },
+          {
+            "isCorrect": true,
+            "_id": "5e7bf109e8554c0de33bcf2d",
+            "text": "common"
+          }
+        ]
+      }
+    ]
+  }
+]

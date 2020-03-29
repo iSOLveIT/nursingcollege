@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+  
   <!--Navigation-->
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
     <div class="container">
@@ -19,10 +20,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active" >
-              <a class="nav-link" href="#"style="color:#fff;">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#" style="color:#fff;">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#"style="color:#fff;">Dashboard</a>
+              <a class="nav-link" href="#" style="color:#fff;">Dashboard</a>
             </li>
             <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -54,21 +55,24 @@
             </div>
         </div>
     </div>
-</nav>
-<!--Content-->
-<div class="main_content container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb" style="background-color: #f18900ce; color:#fff;">
-          <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-dashboard2"></span> Dashboard</a></li>
-            <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-class"></span> My Courses</a></li>
-            <li class="breadcrumb-item bread_selected"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-book"></span> {{ course_detail['courseCode'] }}</a></li>
-        </ol>
-      </nav>
+  </nav>
+  <!--Content-->
+  <div class="main_content container">
+    {% for course in session.get('course_details') %}
+      {% if course['courseCode'] == course_code %}
+      
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" style="background-color: #f18900ce; color:#fff;">
+              <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-dashboard2"></span> Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-class"></span> My Courses</a></li>
+                <li class="breadcrumb-item bread_selected"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-book"></span> {{ course['courseCode'] }}</a></li>
+            </ol>
+        </nav>
         <div class="row container login_section">
             <div class="col-12">
                 <h2>Welcome</h2>
                 <p class="text-monospace">
-                  {{ course_detail['description'] }}
+                  {{ course['description'] }}
                 </p>
             </div>
         </div>
@@ -76,41 +80,29 @@
             <div class="row">
                 <div class="col card-header border" style="font-size: 16pt; font-weight: bolder;">
                     <span class="icon-menu"></span>
-                    {{ course_detail['courseName'] }} Examination 
+                    {{ course['courseName'] }} Examination 
                   </div>
             </div>
-            <div class="row ">
-                <div class="col">
-                    <div class="card">
-                            <img src="https://images.unsplash.com/photo-1581492765274-38bb30a15121?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title"><a href="#" style="color:#000033;">Exam 1</a></h5>
-                              <p class="card-text">[Lecturer Name]</p>
-                              <p class="card-text"><small class="text-muted">(Date and Time posted)</small></p>
-                            </div>
-                      </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                            <img src="https://images.unsplash.com/photo-1581492765274-38bb30a15121?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title"><a href="#" style="color:#000033;">Exam 2</a></h5>
-                                <p class="card-text">[Lecturer Name]</p>
-                              <p class="card-text"><small class="text-muted">(Date and Time posted)</small></p>
-                            </div>
-                      </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                            <img src="https://images.unsplash.com/photo-1581492765274-38bb30a15121?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title"><a href="#" style="color:#000033;">Exam 3</a></h5>
-                                <p class="card-text">[Lecturer Name]</p>
-                              <p class="card-text"><small class="text-muted">(Date and Time posted)</small></p>
-                            </div>
-                      </div>
-                </div>
-            </div>
+
+      {% endif %}        
+    {% endfor %}
+
+        <div class="row ">
+          {% for item in course_exam %}
+            {% if item['courseCode'] == course_code %}
+              <div class="col">
+                <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title"><a href="/courses/{{ item['courseCode'] }}/examdetails/{{ item['examCode'] }}" style="color:#000033;">{{ item['examName'] }}</a></h5>
+                          <p class="card-text">{{ item['lecturerName'] }}</p>
+                          <p class="card-text"><small class="text-muted">{{ item['datePosted'] }}</small></p>
+                        </div>
+                  </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+
         </div>
-</div>
+    </div>
+  </div>
 {% endblock %}

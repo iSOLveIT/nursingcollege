@@ -22,13 +22,17 @@
 
   {% endblock %}
 
+  {% if quiz == False %}
+    <footer class="footer">
+      <div class="container">
+        <p class="text-center text-muted">© 2012–2020 E-Learning | <a style="text-decoration: none; color:inherit;"
+            href="#">Privacy Policy</a>
+      </div>
+    </footer>
+  {% endif %}
+  
 
-  <footer class="footer">
-    <div class="container">
-      <p class="text-center text-muted">© 2012–2020 E-Learning | <a style="text-decoration: none; color:inherit;"
-          href="#">Privacy Policy</a>
-    </div>
-  </footer>
+  
   <!--JAVASCRIPT IMPORTS-->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

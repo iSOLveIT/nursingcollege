@@ -3,7 +3,7 @@ from flask.views import MethodView
 from flask import render_template, request, redirect, url_for, flash, session
 
 # Local modules
-from package.read_json import  course_db
+from package.read_json import  course_db, question_db, examdetail_db
 
 
 class IndexEndpoint(MethodView):
@@ -22,7 +22,7 @@ class IndexEndpoint(MethodView):
         Returns:
             html template -- renders html template
         """
-        return render_template('index.html'), 200
+        return render_template('index.html', quiz=False), 200
     # This function executes when request method for this route = post
 
     #def post(self):
@@ -52,7 +52,7 @@ class DashboardEndpoint(MethodView):
                 content.append(item)
                 session['username'] = username
         session['course_details'] = content
-        return render_template('dashboard.html', username=username, course_details=content), 200
+        return render_template('dashboard.html', quiz=False), 200
 
 
 class CoursesEndpoint(MethodView):
@@ -70,11 +70,11 @@ class CoursesEndpoint(MethodView):
         Returns:
             html template -- renders html template
         """
-        content = session.get('course_details')
-        for item in content:
-            if item['courseCode'] == course_code:
-                course_detail = item
-        return render_template('course.html', course_detail=course_detail), 200
+        exam_detail = examdetail_db()
+        return render_template('course.html',
+                                course_code=course_code, 
+                                course_exam=exam_detail, 
+                                quiz=False),200
 
 
 class ExamdetailsEndpoint(MethodView):
@@ -92,7 +92,11 @@ class ExamdetailsEndpoint(MethodView):
         Returns:
             html template -- renders html template
         """
-        return render_template('exam_detail.html'), 200
+        exam_detail = examdetail_db()
+        for item in exam_detail:
+            if item['examCode'] == exam_code:
+                context = item
+        return render_template('exam_detail.html', context=context, quiz=False), 200
 
 
 class ExamEndpoint(MethodView):
@@ -110,5 +114,29 @@ class ExamEndpoint(MethodView):
         Returns:
             html template -- renders html template
         """
-        return render_template('exam.html'), 200
+        load_questions = question_db()
+        for item in load_questions:
+            if item['examCode'] == exam_code:
+                exam_questions = item['questions']
+        return render_template('exam.html', quiz=True, questions=exam_questions), 200
 
+
+class ExamMarkingEndpoint(MethodView):
+
+    """View for Exam Marking Route
+    
+    Arguments:
+        MethodView -- If you implement a request method (like POST), it will be used to handle POST requests.
+    
+    Returns:
+        none
+    """
+    # 
+
+    def post(self):
+        """This function executes when request method for this route = post
+        
+        Returns:
+            str -- The marks for the exam
+        """
+        return redirect(url_for('index', _anchor='contact-section'))

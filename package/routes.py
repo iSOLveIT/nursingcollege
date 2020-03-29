@@ -16,3 +16,6 @@ app.add_url_rule("/courses/<string:course_code>/examdetails/<string:exam_code>",
 
 # Route for Exam
 app.add_url_rule("/courses/<string:course_code>/examdetails/<string:exam_code>/exam", view_func=ExamEndpoint.as_view("exam"))
+
+# Route for Exam Marking
+app.add_url_rule("/courses/<string:course_code>/examdetails/<string:exam_code>/exam/results", view_func=ExamMarkingEndpoint.as_view("results"))

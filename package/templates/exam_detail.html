@@ -29,11 +29,10 @@
               My Courses
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Course 1</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Course 2</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Course 3</a>
+              {% for item in session.get('course_details') %}
+                <a class="dropdown-item" href="#">{{ item['courseCode'] }}</a>
+                <div class="dropdown-divider"></div>
+              {% endfor %}
             </div>
           </li>
         </ul>
@@ -42,7 +41,7 @@
             <span class="icon-user-circle-o" style="font-size: 16pt;"></span>
             <li class="nav-item dropdown active" style="list-style: none;">
               <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                DUODU RANDY
+                {{ session.username }}
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#"><span class="icon-link2"></span> Link 1</a>
@@ -62,13 +61,13 @@
       <ol class="breadcrumb" style="background-color: #f18900ce; color:#fff;">
         <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-dashboard2"></span> Dashboard</a></li>
           <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-class"></span> My Courses</a></li>
-          <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-book"></span> Course Code</a></li>
+          <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-book"></span> {{ context['courseCode'] }}</a></li>
           <li class="breadcrumb-item bread_selected" aria-current="page"><span class="icon-assignment"></span> Examination</li>
       </ol>
     </nav>
       <div class="row container login_section">
           <div class="col-12">
-              <h2>Exam 1</h2>
+              <h2>{{ context['examName'] }}</h2>
           </div>
       </div>
       <div class="quizQuestion rounded border container mt-3">
@@ -108,9 +107,9 @@
                 </table>
           </div>
           <div class="text-center">
-              <div class="btn btn-success">
+              <a href="/courses/{{ context['courseCode'] }}/examdetails/{{ context['examCode'] }}/exam"  class="btn btn-success">
                   Start Quiz
-              </div>
+              </a>
           </div>
       </div>
 </div>
