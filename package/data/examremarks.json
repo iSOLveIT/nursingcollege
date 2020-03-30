@@ -1,0 +1,55 @@
+[
+    {
+        "courseCode": "INT-202",
+        "exams":[
+            {
+                "examCode":"5e7bf109e8554c0de33bce2d",
+                "participants":[
+                    {
+                        "username":"Tetteh Agnes",
+                        "submissionStatus":"No Attempt",
+                        "gradingStatus":"Not Graded",
+                        "dueDate":"04-04-2020, 05:00 PM",
+                        "dateModified":""
+                    },
+                    {
+                        "username":"Tetteh Evans",
+                        "submissionStatus":"No Attempt",
+                        "gradingStatus":"Not Graded",
+                        "dueDate":"04-04-2020, 05:00 PM",
+                        "dateModified":""
+                    }
+                ]
+            },
+            {
+                "examCode":"5e7bf109e8554c0de33bce2c",
+                "participants":[
+                    {
+                        "username":"Tetteh Agnes",
+                        "submissionStatus":"No Attempt",
+                        "gradingStatus":"Not Graded",
+                        "dueDate":"04-04-2020, 05:00 PM",
+                        "dateModified":""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "courseCode": "IO-12",
+        "exams":[
+            {
+                "examCode":"5e7bf109e8554c0de33bce2a",
+                "participants":[
+                    {
+                        "username":"Enock Ato",
+                        "submissionStatus":"No Attempt",
+                        "gradingStatus":"Not Graded",
+                        "dueDate":"04-04-2020, 05:00 PM",
+                        "dateModified":""
+                    }
+                ]
+            }
+        ]
+    }
+]

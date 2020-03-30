@@ -6,6 +6,8 @@ directory = join(dirname(realpath(__file__)), 'data')
 courseJson_path = directory + '/course.json'
 questionJson_path = directory + '/question.json'
 examdetailJson_path = directory + '/examdetail.json'
+examremarksJson_path = directory + '/examremarks.json'
+
 
 def course_db():
     with open(courseJson_path, 'r') as f:
@@ -24,6 +26,9 @@ def examdetail_db():
         content = json.load(f)
     return content
 
+"""
+#def examremarks_db():
+
 #data = course_db()
 #with open(json_path, 'w') as file:
     #for item in data:
@@ -31,3 +36,4 @@ def examdetail_db():
     #json.dump(data, file, indent=2, sort_keys=True)
 #print(len(data[0]))
 #print(examdetail_db())
+"""

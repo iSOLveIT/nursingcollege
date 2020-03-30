@@ -1,6 +1,6 @@
 # Third-party modules
 from package import app
-# Standard library modules
+# Built-in modules
 import os
 
 app.config['SECRET_KEY'] = os.urandom(125)  # Secret key
