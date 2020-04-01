@@ -1,9 +1,5 @@
 {% extends 'layout.html' %}
 
-{% block title %}
-    <title>Exam Page</title>
-{% endblock %}
-
 {% block content %}
   <!--Navigation-->
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
@@ -23,12 +19,21 @@
                 Goto 
             </a>
           </div>
+          <ul class="navbar-nav ml-md-auto">
+            <li class="nav-item">
+                <div class="form-inline my-2 my-lg-0" style="font-size: 20pt;">
+                    <span class="icon-clock-o" style="margin-right:5px;"></span>
+                    <h4 id="time" style="font-weight:bold; margin-bottom:0;">Time</h4>
+                </div>
+            </li>
+          </ul>
+          
         </div>
     </div>
 </nav>
 <!--Content-->
 <div class="main_content container">
-    <form action="" method="POST">
+    <form action="" method="POST" id="quizForm">
         {% for question in  questions %}
             <div class="row quizQuestion rounded border container" >
                 <div class=" col-12" id="{{ question['_id'] }}">
@@ -63,9 +68,16 @@
         {% endfor %}
         
         <div class="quizControl">
-            <button type="submit" class="btn btn-outline-success">Submit</button>
+            <button type="submit" id="exambtn" class="btn btn-outline-success">Submit</button>
         </div>
     </form>
 </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{{ url_for('static', filename='js/timer.js') }}"></script>
+    <script>
+        var Seconds = {{ time }};
+    </script>
 {% endblock %}
 

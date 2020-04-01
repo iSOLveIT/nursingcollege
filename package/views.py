@@ -143,12 +143,20 @@ class ExamEndpoint(MethodView):
         Returns:
             html template -- renders html template
         """
+        exam_detail = examdetail_db()
+        time_allowed = 0
+        for detail in exam_detail:
+            if detail['courseCode'] == course_code and detail['examCode'] == exam_code:
+                time_allowed += detail['timeAllocated']
+        time = time_allowed * 60
+
         load_questions = question_db()
         exam_questions = []
         for item in load_questions:
             if item['examCode'] == exam_code:
                 exam_questions = item['questions']
-        return render_template('exam.html', quiz=True, questions=exam_questions), 200
+        return render_template('exam.html', quiz=True,
+                               questions=exam_questions, time=time), 200
 
     @staticmethod
     def post(course_code, exam_code):

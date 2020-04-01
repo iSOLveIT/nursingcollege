@@ -26,10 +26,10 @@
               <a class="nav-link" href="#" style="color:#fff;">Dashboard</a>
             </li>
             <li class="nav-item dropdown active">
-              <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 My Courses
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
                 {% for item in session.get('course_details') %}
                   <a class="dropdown-item" href="#">{{ item['courseCode'] }}</a>
                   <div class="dropdown-divider"></div>
@@ -41,10 +41,10 @@
           <div class="form-inline my-2 my-lg-0">
               <span class="icon-user-circle-o" style="font-size: 16pt;"></span>
               <li class="nav-item dropdown active" style="list-style: none;">
-                <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{ session.username }}
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                   <a class="dropdown-item" href="#"><span class="icon-link2"></span> Link 1</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#"><span class="icon-settings"></span> Preferrences</a>
