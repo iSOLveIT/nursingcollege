@@ -176,7 +176,6 @@ class ExamEndpoint(MethodView):
             name_attr = "Q" + str(num)
             try:
                 option = request.form[name_attr]
-                print(name_attr, option)
                 user_inputs[name_attr] = option
             except KeyError:
                 option = None

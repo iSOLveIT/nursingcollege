@@ -6,15 +6,15 @@
                 "examCode": "5e7bf109e8554c0de33bce2d",
                 "participants": [
                     {
-                        "dateModified": "01-04-2020, 12:18 AM",
-                        "gradingStatus": "You had 80.95 out of 100",
+                        "dateModified": "01-04-2020, 05:58 PM",
+                        "gradingStatus": "You had 0.0 out of 100",
                         "submissionStatus": 1,
                         "userID": "10087873"
                     },
                     {
-                        "dateModified": "01-04-2020, 03:56 AM",
-                        "gradingStatus": "You had 76.19 out of 100",
-                        "submissionStatus": 1,
+                        "dateModified": "",
+                        "gradingStatus": "",
+                        "submissionStatus": 0,
                         "userID": "10087872"
                     }
                 ]
