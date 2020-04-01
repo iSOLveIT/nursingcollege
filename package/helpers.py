@@ -32,4 +32,4 @@ def ocr(exam_code, results, num_questions):
 
     rounded_marks = round(total_marks, 2)
 
-    return f'You had {rounded_marks} out of 100'
+    return f'{rounded_marks} out of 100'

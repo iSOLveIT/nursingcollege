@@ -107,7 +107,7 @@ class ExamdetailsEndpoint(MethodView):
 
         exam_detail = examdetail_db()
         remarks = ExamRemarks()
-        context = ""
+        context = {}
 
         for item in exam_detail:
             if item['examCode'] == exam_code:

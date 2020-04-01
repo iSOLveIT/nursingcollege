@@ -31,7 +31,12 @@ def examdetail_db():
 class ExamRemarks:
     """This class contains methods for showing and updating participants data for exam
     """
-    
+    @staticmethod
+    def showremarks():
+        with open(examremarksJson_path, 'r') as f:
+            content = json.load(f)
+        return content
+
     @staticmethod
     def updateremarks(course_code, exam_code, user_id, content):
         data = ExamRemarks.showremarks()
@@ -49,11 +54,7 @@ class ExamRemarks:
         with open(examremarksJson_path, 'w') as f:
             json.dump(data, f, indent=4, sort_keys=True)
 
-    @staticmethod
-    def showremarks():
-        with open(examremarksJson_path, 'r') as f:
-            content = json.load(f)
-        return content
+    
 
 """
 #data = course_db()

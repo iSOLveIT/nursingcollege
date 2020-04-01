@@ -15,12 +15,12 @@ function startTimer(duration, display) {
             timer = duration;
             display.textContent = "Time's Up!";
             clearInterval(refresh);  // exit refresh loop
-            window.localStorage.removeItem("seconds")
-            window.localStorage.removeItem("minutes")
+            localStorage.removeItem("seconds");
+            localStorage.removeItem("minutes");
             document.getElementById('quizForm').submit();
+            
             // alert("Time's Up!");
         }
-      console.log(parseInt(seconds))
       window.localStorage.setItem("seconds",seconds)
       window.localStorage.setItem("minutes",minutes)
     }, 1000);
@@ -41,9 +41,6 @@ function startTimer(duration, display) {
       startTimer(Second, display);
     };
 
-document.getElementById("exambtn").onclick = remove_items;
 
-function remove_items() {
-    window.localStorage.removeItem("seconds");
-    window.localStorage.removeItem("minutes");
-}
+
+
