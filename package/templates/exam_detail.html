@@ -77,40 +77,79 @@
                   Examination Details
                 </div>
           </div>
-          <div class="row ">
-              <table class="table table-striped">
-                    
+
+          {% if user['submissionStatus'] >= 1%}
+            <div class="row ">
+                <table class="table table-striped">
                   <tbody>
-                      <tr>
-                          <th scope="col">Submission Status</th>
-                          <td>No Attempt</td>
-                        </tr>
                     <tr>
-                      <th scope="col">Grading Status</th>
-                      <td>Not Graded</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">Due Date</th>
-                      <td>21st January, 2020</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">Date Modified</th>
-                      <td>----------</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">Instructions</th>
-                      <td>
-                        {{ context['instructions'] }}
-                      </td>
-                    </tr>
-                  </tbody>
+                        <th scope="col">Submission Status</th>
+                        <td> {{ user['submissionStatus'] }} Attempt(s)</td>
+                      </tr>
+                  <tr>
+                    <th scope="col">Grading Status</th>
+                    <td>{{ user['gradingStatus'] }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Due Date</th>
+                    <td>{{ context['dueDate'] }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Date Modified</th>
+                    <td>{{ user['dateModified'] }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Time Allowed</th>
+                    <td>{{ context['timeAllocated'] }} minutes</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">Instructions</th>
+                    <td>
+                      {{ context['instructions'] }}
+                    </td>
+                  </tr>
+                    </tbody> 
                 </table>
-          </div>
-          <div class="text-center">
-              <a href="/courses/{{ context['courseCode'] }}/examdetails/{{ context['examCode'] }}/exam"  class="btn btn-success">
-                  Start Quiz
-              </a>
-          </div>
+            </div>
+          {% else %}
+            <div class="row ">
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                      <th scope="col">Submission Status</th>
+                      <td>No Attempt</td>
+                    </tr>
+                <tr>
+                  <th scope="col">Grading Status</th>
+                  <td>Not Graded</td>
+                </tr>
+                <tr>
+                  <th scope="col">Due Date</th>
+                  <td>{{ context['dueDate'] }}</td>
+                </tr>
+                <tr>
+                  <th scope="col">Date Modified</th>
+                  <td>29-12-2019, 05:00 PM</td>
+                </tr>
+                <tr>
+                  <th scope="col">Time Allowed</th>
+                  <td>{{ context['timeAllocated'] }} minutes</td>
+                </tr>
+                <tr>
+                  <th scope="col">Instructions</th>
+                  <td>
+                    {{ context['instructions'] }}
+                  </td>
+                </tr>
+                  </tbody> 
+              </table>
+            </div>
+            <div class="text-center">
+            <a href="/courses/{{ context['courseCode'] }}/examdetails/{{ context['examCode'] }}/exam"  class="btn btn-success">
+                Start Quiz
+            </a>
+            </div>        
+          {% endif %}
       </div>
 </div>
 {% endblock %}

@@ -3,7 +3,7 @@ from flask.views import MethodView
 from flask import render_template, request, redirect, url_for, flash, session
 
 # Local modules
-from package.read_json import course_db, question_db, examdetail_db
+from package.read_json import course_db, question_db, examdetail_db, ExamRemarks
 from package.helpers import ocr
 
 # Built-in modules
@@ -54,10 +54,11 @@ class DashboardEndpoint(MethodView):
         data = course_db()
         content = []
         for item in data:
-            if item['user'] == user_id:
-                username = item['username']
-                content.append(item)
-                session['username'] = username
+            if user_id in item['registeredStudents']:
+                content.append({"courseCode": item['courseCode'],
+                                "courseName": item['courseName'],
+                                "description": item['description']})
+                session['username'] = user_id
         session['course_details'] = content
         return render_template('dashboard.html', quiz=False), 200
 
@@ -105,12 +106,24 @@ class ExamdetailsEndpoint(MethodView):
         """
 
         exam_detail = examdetail_db()
+        remarks = ExamRemarks()
         context = ""
 
         for item in exam_detail:
             if item['examCode'] == exam_code:
                 context = item
-        return render_template('exam_detail.html', context=context, quiz=False), 200
+
+        user_remarks = {}
+        for remark in remarks.showremarks():
+            if remark['courseCode'] == course_code:
+                for exam in remark['exams']:
+                    if exam['examCode'] == exam_code:
+                        for user in exam['participants']:
+                            if user['userID'] == session.get('username'):
+                                user_remarks = user
+
+        return render_template('exam_detail.html', context=context,
+                               user=user_remarks, quiz=False), 200
 
 
 class ExamEndpoint(MethodView):
@@ -145,11 +158,11 @@ class ExamEndpoint(MethodView):
             str -- The calculated marks for the exam
         """
         examCode = exam_code
+        courseCode = course_code
         user_inputs = {}
         total_questions = [len(exam['questions']) for exam in question_db() if exam['examCode'] == exam_code]
 
         question_in_range = list(range(1, total_questions[0] + 1))
-        print("Qrange", question_in_range)
 
         for num in question_in_range:
             name_attr = "Q" + str(num)
@@ -161,16 +174,25 @@ class ExamEndpoint(MethodView):
                 option = None
                 user_inputs[name_attr] = option
 
-        print("Inputs", user_inputs)
-
         ocr_results = ocr(exam_code=examCode,
                           results=user_inputs,
                           num_questions=total_questions[0])
 
+        remarks = ExamRemarks
+        remarks.updateremarks(course_code=courseCode,
+                              exam_code=examCode,
+                              user_id=session.get('username'),
+                              content=ocr_results)
+
+        """
         message_bytes = ocr_results.encode('ascii')
         encoded_msg = base64.b64encode(message_bytes)
         decoded_msg = encoded_msg.decode('ascii')
-        return redirect(url_for('show', results=decoded_msg, _external=True))
+        """
+        return redirect(url_for('examdetails',
+                                course_code=courseCode,
+                                exam_code=examCode,
+                                _external=True))
 
 
 '''

@@ -26,7 +26,6 @@ def ocr(exam_code, results, num_questions):
                         else:
                             continue  # continue to the next iteration
 
-    print('Answers', answers)
     correct_answers = [1 for ans in answers if ans is True]
 
     total_marks = (len(correct_answers) / num_questions) * 100

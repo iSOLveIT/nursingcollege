@@ -1,35 +1,32 @@
 [
     {
         "courseCode": "INT-202",
-        "exams":[
+        "exams": [
             {
-                "examCode":"5e7bf109e8554c0de33bce2d",
-                "participants":[
+                "examCode": "5e7bf109e8554c0de33bce2d",
+                "participants": [
                     {
-                        "username":"Tetteh Agnes",
-                        "submissionStatus":"No Attempt",
-                        "gradingStatus":"Not Graded",
-                        "dueDate":"04-04-2020, 05:00 PM",
-                        "dateModified":""
+                        "dateModified": "01-04-2020, 12:18 AM",
+                        "gradingStatus": "You had 80.95 out of 100",
+                        "submissionStatus": 1,
+                        "userID": "10087872"
                     },
                     {
-                        "username":"Tetteh Evans",
-                        "submissionStatus":"No Attempt",
-                        "gradingStatus":"Not Graded",
-                        "dueDate":"04-04-2020, 05:00 PM",
-                        "dateModified":""
+                        "dateModified": "",
+                        "gradingStatus": "Not Graded",
+                        "submissionStatus": 0,
+                        "userID": "10087873"
                     }
                 ]
             },
             {
-                "examCode":"5e7bf109e8554c0de33bce2c",
-                "participants":[
+                "examCode": "5e7bf109e8554c0de33bce2c",
+                "participants": [
                     {
-                        "username":"Tetteh Agnes",
-                        "submissionStatus":"No Attempt",
-                        "gradingStatus":"Not Graded",
-                        "dueDate":"04-04-2020, 05:00 PM",
-                        "dateModified":""
+                        "dateModified": "",
+                        "gradingStatus": "Not Graded",
+                        "submissionStatus": 0,
+                        "userID": "10087874"
                     }
                 ]
             }
@@ -37,16 +34,15 @@
     },
     {
         "courseCode": "IO-12",
-        "exams":[
+        "exams": [
             {
-                "examCode":"5e7bf109e8554c0de33bce2a",
-                "participants":[
+                "examCode": "5e7bf109e8554c0de33bce2a",
+                "participants": [
                     {
-                        "username":"Enock Ato",
-                        "submissionStatus":"No Attempt",
-                        "gradingStatus":"Not Graded",
-                        "dueDate":"04-04-2020, 05:00 PM",
-                        "dateModified":""
+                        "dateModified": "",
+                        "gradingStatus": "Not Graded",
+                        "submissionStatus": "No Attempt",
+                        "userID": "10087872"
                     }
                 ]
             }

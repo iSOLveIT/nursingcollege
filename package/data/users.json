@@ -1,0 +1,35 @@
+[
+  {
+    "userID": "10087872",
+    "username": "Tetteh Agnes",
+    "registeredCourses": [
+      {"courseCode": "GA-01"},
+      {"courseCode": "TA-11"},
+      {"courseCode": "IO-12"},
+      {"courseCode": "KQ-91"},
+      {"courseCode": "INT-202"}
+    ]
+  },
+  {
+    "userID": "10087873",
+    "username": "Tetteh Kelvin",
+    "registeredCourses": [
+      {"courseCode": "GA-01"},
+      {"courseCode": "TA-11"},
+      {"courseCode": "MA-11"},
+      {"courseCode": "KQ-91"},
+      {"courseCode": "INT-202"}
+    ]
+  },
+  {
+    "userID": "10087874",
+    "username": "Tetteh Sammy",
+    "registeredCourses": [
+      {"courseCode": "GA-01"},
+      {"courseCode": "TA-11"},
+      {"courseCode": "MA-11"},
+      {"courseCode": "KQ-91"},
+      {"courseCode": "INT-202"}
+    ]
+  }
+]

@@ -23,10 +23,7 @@ app.add_url_rule("/courses/<string:course_code>/examdetails/<string:exam_code>",
 # Route for Exam
 app.add_url_rule("/courses/<string:course_code>/examdetails/<string:exam_code>/exam", view_func=ExamEndpoint.as_view("exam"))
 
-# Route for Exam Marking
-# app.add_url_rule("/courses/<string:course_code>/examdetails/<string:exam_code>/exam/results", view_func=ExamMarkingEndpoint.as_view("results"))
-
-
+"""
 # Test
 @app.route("/show")
 def show():
@@ -35,3 +32,4 @@ def show():
     encoded_msg = base64.b64decode(message_bytes)
     decoded_msg = encoded_msg.decode('ascii')
     return f"<h1> {decoded_msg} </h1>"
+"""
