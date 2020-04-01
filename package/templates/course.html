@@ -30,7 +30,7 @@
                 My Courses
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                {% for item in session.get('course_details') %}
+                {% for item in course_details %}
                   <a class="dropdown-item" href="/courses/{{ item['courseCode'] }}">{{ item['courseCode'] }}</a>
                   <div class="dropdown-divider"></div>
                 {% endfor %}
@@ -58,7 +58,7 @@
   </nav>
   <!--Content-->
   <div class="main_content container">
-    {% for course in session.get('course_details') %}
+    {% for course in course_details %}
       {% if course['courseCode'] == course_code %}
       
         <nav aria-label="breadcrumb">

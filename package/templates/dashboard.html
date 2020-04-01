@@ -29,7 +29,7 @@
                 My Courses
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                {% for item in session.get('course_details') %}
+                {% for item in course_details %}
                   <a class="dropdown-item" href="/courses/{{ item['courseCode'] }}">{{ item['courseCode'] }}</a>
                   <div class="dropdown-divider"></div>
                 {% endfor %}
@@ -89,7 +89,7 @@
                   </div>
             </div>
             <div class="row ">
-              {% for course in session.get('course_details') %}
+              {% for course in course_details %}
                 <div class="col">
                     <div class="card">
                       <img src="https://images.unsplash.com/photo-1581492765274-38bb30a15121?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img" alt="...">

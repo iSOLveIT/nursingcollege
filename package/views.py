@@ -59,8 +59,7 @@ class DashboardEndpoint(MethodView):
                                 "courseName": item['courseName'],
                                 "description": item['description']})
                 session['username'] = user_id
-        session['course_details'] = content
-        return render_template('dashboard.html', quiz=False), 200
+        return render_template('dashboard.html',course_details=content, quiz=False), 200
 
 
 class CoursesEndpoint(MethodView):
@@ -80,9 +79,20 @@ class CoursesEndpoint(MethodView):
         Returns:
             html template -- renders html template
         """
+        data = course_db()
+        content = []
+        user_id = session.get('username')
+
+        for item in data:
+            if user_id in item['registeredStudents']:
+                content.append({"courseCode": item['courseCode'],
+                                "courseName": item['courseName'],
+                                "description": item['description']})
+
         exam_detail = examdetail_db()
         return render_template('course.html',
                                course_code=course_code,
+                               course_details = content,
                                course_exam=exam_detail,
                                quiz=False), 200
 
@@ -104,6 +114,15 @@ class ExamdetailsEndpoint(MethodView):
         Returns:
             html template -- renders html template
         """
+        data = course_db()
+        content = []
+        user_id = session.get('username')
+
+        for item in data:
+            if user_id in item['registeredStudents']:
+                content.append({"courseCode": item['courseCode'],
+                                "courseName": item['courseName'],
+                                "description": item['description']})
 
         exam_detail = examdetail_db()
         remarks = ExamRemarks()
@@ -122,7 +141,7 @@ class ExamdetailsEndpoint(MethodView):
                             if user['userID'] == session.get('username'):
                                 user_remarks = user
 
-        return render_template('exam_detail.html', context=context,
+        return render_template('exam_detail.html', context=context, course_details=content,
                                user=user_remarks, quiz=False), 200
 
 
