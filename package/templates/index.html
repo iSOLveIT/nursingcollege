@@ -9,8 +9,7 @@
      <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
       <div class="container">
           <a class="navbar-brand" href="/" style="color:#fff;">
-              <!--<img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
-              E-LEARNING
+            <img src="{{ url_for('static', filename='bg.png') }}" width="120" height="80" class="d-inline-block align-top" alt="E-LEARNING">
           </a>
           <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon" ></span>
@@ -19,22 +18,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active" >
-                <a class="nav-link" href="/"style="color:#fff;">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/" style="color:#fff;">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="#loginSection"style="color:#fff;">Login</a>
+                <a class="nav-link" href="#loginSection" style="color:#fff;">Login</a>
               </li>
-              <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
+             
             </ul>
             
           </div>
@@ -44,75 +33,70 @@
    <!--Carousel-->
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-wrap="true" data-touch="true">
       <div class="carousel-inner">
-      <div class="carousel-item active" data-interval="5000">
-          <img src="https://cloe-brooks.themerex.net/wp-content/uploads/revslider/home-1/slide1.jpg"
-          class="d-block w-100 slide_img" alt="First Slide" height="450px">
-          <!-- Static Header -->
-          <div class="header-text hidden-xs">
-          <div class="col-md-12 text-left">
-              <h1>
-              <span>Helping People Gain </span>
-              </h1>
-              <br>
-              <h1>
-              <span>Power in Their Life</span>
-              </h1>
-              <br>
-              <div style="padding-top:10px;">
-              <a href="#" target="_blank" class="bg-info"
-                  style="color:#ffffff;border-radius: 1.66em; display: inline-block;text-decoration: none; padding: 1em 2em;background-color: #72b5ca;">
-                  More information
-              </a>
-              </div>
-          </div>
-          </div><!-- /header-text -->
-      </div>
-      <div class="carousel-item" data-interval="5000">
-          <img src="https://cloe-brooks.themerex.net/wp-content/uploads/revslider/home-1/slide1.jpg"
-          class="d-block w-100 slide_img" alt="Second Slide" height="450px">
-          <!-- Static Header -->
-          <div class="header-text hidden-xs">
-          <div class="col-md-12 text-center">
-              <h1>
-              <span>We Can Do Small Things</span>
-              </h1>
-              <br>
-              <h1>
-              <span>With Great Love</span>
-              </h1>
-              <br>
-              <div style="padding-top:10px;">
-              <a href="#" target="_blank" class="bg-info"
-                  style="color:#ffffff;border-radius: 1.66em; display: inline-block;text-decoration: none; padding: 1em 2em;background-color: #72b5ca;">
-                  More Information
-              </a>
-              </div>
-          </div>
-          </div><!-- /header-text -->
-      </div>
-      <div class="carousel-item" data-interval="5000">
-          <img src="https://cloe-brooks.themerex.net/wp-content/uploads/revslider/home-1/slide1.jpg"
-          class="d-block w-100 slide_img" alt="Third Slide" height="450px">
-          <!-- Static Header -->
-          <div class="header-text hidden-xs">
-          <div class="col-md-12 text-left">
-              <h1>
-              <span>Improve Your Life</span>
-              </h1>
-              <br>
-              <h5>
-              <span>Relate to each other from the best in you...</span>
-              </h5>
-              <br>
-              <div style="padding-top:10px;">
-              <a href="#" target="_blank" class="bg-info"
-                  style="color:#ffffff;border-radius: 1.66em; display: inline-block;text-decoration: none; padding: 1em 2em;background-color: #72b5ca;">
-                  More information
-              </a>
-              </div>
-          </div>
-          </div><!-- /header-text -->
-      </div>
+
+        <div class="carousel-item active" data-interval="5000">
+            <img src="https://cloe-brooks.themerex.net/wp-content/uploads/revslider/home-1/slide1.jpg"
+            class="d-block w-100 slide_img" alt="First Slide" height="400px">
+            <!-- Static Header -->
+            <div class="header-text hidden-xs">
+            <div class="col-md-12 text-center">
+                <h1 style="text-shadow: 2px 2px 4px #000000;">
+                <span>Welcome to Nursing & Midwifery Training College</span>
+                </h1>
+                <br>
+                <h1 style="text-shadow: 2px 2px 4px #000000;">
+                <span>Pantang</span>
+                </h1>
+                
+            </div>
+            </div><!-- /header-text -->
+        </div>
+
+        <div class="carousel-item" data-interval="5000">
+            <img src="https://cloe-brooks.themerex.net/wp-content/uploads/revslider/home-1/slide1.jpg"
+            class="d-block w-100 slide_img" alt="Second Slide" height="400px">
+            <!-- Static Header -->
+            <div class="header-text hidden-xs">
+            <div class="col-md-12 text-left">
+                <h1 style="text-shadow: 2px 2px 4px #000000;">
+                <span>E-LEARNING Platform</span>
+                </h1>
+                <h5 >
+                <span>Visit the login page to access course resources</span>
+                </h5>
+                <br>
+                <div style="padding-top:10px;">
+                <a href="#" target="_blank" class="btn btn-warning"
+                    style="border-radius: 1.66em; display: inline-block;text-decoration: none; padding: 1em 2em;">
+                    Login Account
+                </a>
+                </div>
+            </div>
+            </div><!-- /header-text -->
+        </div>
+        
+        <div class="carousel-item" data-interval="5000">
+            <img src="https://cloe-brooks.themerex.net/wp-content/uploads/revslider/home-1/slide1.jpg"
+            class="d-block w-100 slide_img" alt="Third Slide" height="400px">
+            <!-- Static Header -->
+            <div class="header-text hidden-xs">
+            <div class="col-md-12 text-left">
+                <h1 style="text-shadow: 2px 2px 4px #000000;">
+                <span>Improve Your Life</span>
+                </h1>
+                <h5>
+                <span>Relate to each other from the best in you...</span>
+                </h5>
+                <br>
+                <div style="padding-top:10px;">
+                <a href="#" target="_blank" class="btn btn-warning"
+                    style="border-radius: 1.66em; display: inline-block;text-decoration: none; padding: 1em 2em;">
+                    More information
+                </a>
+                </div>
+            </div>
+            </div><!-- /header-text -->
+        </div>
       </div>
 
   </div>

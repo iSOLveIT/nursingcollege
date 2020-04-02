@@ -30,9 +30,10 @@ p {
 
 .navbar{
     padding: 1rem 1rem;
-    background-color: #000033;
+    background-color: #0064b0;
     color:#fff !important;
 }
+
 
 .main_content{
     background-color: #f0f0f0;
@@ -235,7 +236,7 @@ label {
     } 
 }  
 .user_detail li:first-child{
-    background-color: #000033;
+    background-color: #0064b0;
     color:#fff;
 }
 .bread_selected{

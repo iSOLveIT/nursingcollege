@@ -7,39 +7,38 @@
 {% block content %}
  <!--Navigation-->
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-  <div class="container">
-      <a class="navbar-brand" href="/" style="color:#fff;">
-          <!--<img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
-          E-LEARNING
-      </a>
-      <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" ></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active" >
-            <a class="nav-link" href="/" style="color:#fff;">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/dashboard/{{ session.username }}" style="color:#fff;">Dashboard</a>
-          </li>
-          <li class="nav-item dropdown active">
-            <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              My Courses
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-              {% for item in course_details %}
-                <a class="dropdown-item" href="/courses/{{ item['courseCode'] }}">{{ item['courseCode'] }}</a>
-                <div class="dropdown-divider"></div>
-              {% endfor %}
-            </div>
-          </li>
-        </ul>
+        <div class="container">
+        <a class="navbar-brand" href="/" style="color:#fff;">
+          <img src="{{ url_for('static', filename='bg.png') }}" width="120" height="80" class="d-inline-block align-top" alt="E-LEARNING">
+        </a>
+        <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" ></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" >
+              <a class="nav-link" href="/" style="color:#fff;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/dashboard/{{ session.username }}" style="color:#fff;">Dashboard</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Courses
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                {% for item in session.get('course_details') %}
+                  <a class="dropdown-item" href="/courses/{{ item['courseCode'] }}">{{ item['courseCode'] }}</a>
+                  <div class="dropdown-divider"></div>
+                {% endfor %}
+              </div>
+            </li>
+          </ul>
 
-        <div class="form-inline my-2 my-lg-0">
-            <span class="icon-user-circle-o" style="font-size: 16pt;"></span>
-            <ul class="navbar-nav mr-auto">
+          <div class="form-inline my-2 my-lg-0">
+              <span class="icon-user-circle-o" style="font-size: 16pt;"></span>
+              <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown active" style="list-style: none;">
                 <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{ session.username }}
@@ -52,10 +51,10 @@
                   <a class="dropdown-item" href="#"><span class="icon-exit_to_app"></span> Logout</a>
                 </div>
               </li>
-            </ul>
-          </div>
-      </div>
-  </div>
+              </ul>
+            </div>
+        </div>
+        </div>
 </nav>
 <!--Content-->
     <div class="main_content container">
@@ -115,13 +114,13 @@
             </div>
             {% if 0 <= user['submissionStatus'] < 3%}
                 <div class="text-center">
-                  <a href="/courses/{{ context['courseCode'] }}/examdetails/{{ context['examCode'] }}/exam"  class="btn btn-success">
+                  <a href="/courses/{{ context['courseCode'] }}/examdetails/{{ context['examCode'] }}/exam"  class="btn btn-warning">
                       Start Quiz
                   </a>
                 </div>
             {% else %}
                 <div class="text-center">
-                  <a href="/courses/{{ context['courseCode'] }}/examdetails/{{ context['examCode'] }}/exam"  class="btn btn-success disabled" tabindex="-1" role="button" aria-disabled="true">
+                  <a href="/courses/{{ context['courseCode'] }}/examdetails/{{ context['examCode'] }}/exam"  class="btn btn-warning disabled" tabindex="-1" role="button" aria-disabled="true">
                       Start Quiz
                   </a>
                 </div>
