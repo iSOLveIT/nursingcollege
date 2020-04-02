@@ -7,4 +7,5 @@ app.config['SECRET_KEY'] = os.urandom(125)  # Secret key
 
 
 if __name__ == '__main__':
+    app.secret_key = os.urandom(75)
     app.run()

@@ -17,7 +17,6 @@ SESSION_KEY_PREFIX = 'pcollege'
 app.config.from_object(__name__)
 Session(app)
 
-app.secret_key = os.urandom(75)
 
 # Local modules
 from package import routes
