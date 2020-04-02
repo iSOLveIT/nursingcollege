@@ -30,7 +30,7 @@
                 My Courses
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                {% for item in course_details %}
+                {% for item in session.get('course_details') %}
                   <a class="dropdown-item" href="/courses/{{ item['courseCode'] }}">{{ item['courseCode'] }}</a>
                   <div class="dropdown-divider"></div>
                 {% endfor %}

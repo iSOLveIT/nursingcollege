@@ -59,6 +59,7 @@ class DashboardEndpoint(MethodView):
                                 "courseName": item['courseName'],
                                 "description": item['description']})
                 session['username'] = user_id
+        session['course_details'] = content
         return render_template('dashboard.html',
                                course_details=content, quiz=False), 200
 
