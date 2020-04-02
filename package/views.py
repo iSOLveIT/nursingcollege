@@ -54,12 +54,13 @@ class DashboardEndpoint(MethodView):
         data = course_db()
         content = []
         for item in data:
-            if user_id in item['registeredStudents']:
+            if str(user_id) in item['registeredStudents']:
                 content.append({"courseCode": item['courseCode'],
                                 "courseName": item['courseName'],
                                 "description": item['description']})
                 session['username'] = user_id
-        return render_template('dashboard.html',course_details=content, quiz=False), 200
+        return render_template('dashboard.html',
+                               course_details=content, quiz=False), 200
 
 
 class CoursesEndpoint(MethodView):
@@ -80,19 +81,17 @@ class CoursesEndpoint(MethodView):
             html template -- renders html template
         """
         data = course_db()
-        content = []
         user_id = session.get('username')
 
-        for item in data:
-            if user_id in item['registeredStudents']:
-                content.append({"courseCode": item['courseCode'],
-                                "courseName": item['courseName'],
-                                "description": item['description']})
+        course_detail = {}
+        for course in data:
+            if course['courseCode'] == course_code and str(user_id) in course['registeredStudents']:
+                course_detail = course
 
         exam_detail = examdetail_db()
         return render_template('course.html',
                                course_code=course_code,
-                               course_details = content,
+                               course=course_detail,
                                course_exam=exam_detail,
                                quiz=False), 200
 
@@ -115,23 +114,22 @@ class ExamdetailsEndpoint(MethodView):
             html template -- renders html template
         """
         data = course_db()
-        content = []
         user_id = session.get('username')
 
+        content = []
         for item in data:
-            if user_id in item['registeredStudents']:
+            if str(user_id) in item['registeredStudents']:
                 content.append({"courseCode": item['courseCode'],
                                 "courseName": item['courseName'],
                                 "description": item['description']})
 
         exam_detail = examdetail_db()
-        remarks = ExamRemarks()
         context = {}
-
         for item in exam_detail:
             if item['examCode'] == exam_code:
                 context = item
 
+        remarks = ExamRemarks()
         user_remarks = {}
         for remark in remarks.showremarks():
             if remark['courseCode'] == course_code:
@@ -140,6 +138,8 @@ class ExamdetailsEndpoint(MethodView):
                         for user in exam['participants']:
                             if user['userID'] == session.get('username'):
                                 user_remarks = user
+                            else:
+                                continue
 
         return render_template('exam_detail.html', context=context, course_details=content,
                                user=user_remarks, quiz=False), 200
@@ -186,11 +186,11 @@ class ExamEndpoint(MethodView):
         """
         examCode = exam_code
         courseCode = course_code
-        user_inputs = {}
         total_questions = [len(exam['questions']) for exam in question_db() if exam['examCode'] == exam_code]
 
         question_in_range = list(range(1, total_questions[0] + 1))
 
+        user_inputs = {}
         for num in question_in_range:
             name_attr = "Q" + str(num)
             try:
@@ -204,7 +204,7 @@ class ExamEndpoint(MethodView):
                           results=user_inputs,
                           num_questions=total_questions[0])
 
-        remarks = ExamRemarks
+        remarks = ExamRemarks()
         remarks.updateremarks(course_code=courseCode,
                               exam_code=examCode,
                               user_id=session.get('username'),
@@ -217,8 +217,7 @@ class ExamEndpoint(MethodView):
         """
         return redirect(url_for('examdetails',
                                 course_code=courseCode,
-                                exam_code=examCode,
-                                _external=True))
+                                exam_code=examCode))
 
 
 '''

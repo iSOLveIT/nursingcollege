@@ -7,8 +7,8 @@
 {% block content %}
   
   <!--Navigation-->
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-    <div class="container">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <div class="container">
         <a class="navbar-brand" href="/" style="color:#fff;">
             <!--<img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
             E-LEARNING
@@ -40,7 +40,8 @@
 
           <div class="form-inline my-2 my-lg-0">
               <span class="icon-user-circle-o" style="font-size: 16pt;"></span>
-              <li class="nav-item dropdown active" style="list-style: none;">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown active" style="list-style: none;">
                 <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{ session.username }}
                 </a>
@@ -52,15 +53,13 @@
                   <a class="dropdown-item" href="#"><span class="icon-exit_to_app"></span> Logout</a>
                 </div>
               </li>
+              </ul>
             </div>
         </div>
     </div>
-  </nav>
+    </nav>
   <!--Content-->
-  <div class="main_content container">
-    {% for course in course_details %}
-      {% if course['courseCode'] == course_code %}
-      
+    <div class="main_content container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb" style="background-color: #f18900ce; color:#fff;">
               <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-dashboard2"></span> Dashboard</a></li>
@@ -71,7 +70,7 @@
         <div class="row container login_section">
             <div class="col-12">
                 <h2>Welcome</h2>
-                <p class="text-monospace">
+                <p class="card-text">
                   {{ course['description'] }}
                 </p>
             </div>
@@ -84,25 +83,21 @@
                   </div>
             </div>
 
-      {% endif %}        
-    {% endfor %}
-
-        <div class="row ">
-          {% for item in course_exam %}
-            {% if item['courseCode'] == course_code %}
-              <div class="col">
-                <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title"><a href="/courses/{{ item['courseCode'] }}/examdetails/{{ item['examCode'] }}" style="color:#000033;">{{ item['examName'] }}</a></h5>
-                          <p class="card-text">{{ item['lecturerName'] }}</p>
-                          <p class="card-text"><small class="text-muted">{{ item['datePosted'] }}</small></p>
-                        </div>
+            <div class="row ">
+              {% for item in course_exam %}
+                {% if item['courseCode'] == course_code %}
+                  <div class="col">
+                    <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title"><a href="/courses/{{ item['courseCode'] }}/examdetails/{{ item['examCode'] }}" style="color:#000033;">{{ item['examName'] }}</a></h5>
+                              <p class="card-text">{{ item['lecturerName'] }}</p>
+                              <p class="card-text"><small class="text-muted">{{ item['datePosted'] }}</small></p>
+                            </div>
+                      </div>
                   </div>
-              </div>
-            {% endif %}
-          {% endfor %}
-
+                {% endif %}
+              {% endfor %}
+            </div>
         </div>
     </div>
-  </div>
 {% endblock %}

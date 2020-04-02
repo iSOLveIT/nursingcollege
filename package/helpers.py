@@ -15,7 +15,6 @@ def ocr(exam_code, results, num_questions):
     questionDB = question_db()
 
     answers = []
-
     for exam in questionDB:
         if exam['examCode'] == exam_code:
             for results_keys, question in zip(results.keys(), exam['questions']):
@@ -27,9 +26,7 @@ def ocr(exam_code, results, num_questions):
                             continue  # continue to the next iteration
 
     correct_answers = [1 for ans in answers if ans is True]
-
     total_marks = (len(correct_answers) / num_questions) * 100
-
     rounded_marks = round(total_marks, 2)
 
     return f'{rounded_marks} out of 100'

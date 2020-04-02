@@ -6,8 +6,8 @@
 
 {% block content %}
   <!--Navigation-->
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-    <div class="container">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <div class="container">
         <a class="navbar-brand" href="/" style="color:#fff;">
             <!--<img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
             E-LEARNING
@@ -39,9 +39,10 @@
 
           <div class="form-inline my-2 my-lg-0">
               <span class="icon-user-circle-o" style="font-size: 16pt;"></span>
-              <li class="nav-item dropdown active" style="list-style: none;">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown active" style="list-style: none;">
                 <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  {{session.username}}
+                  {{ session.username }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                   <a class="dropdown-item" href="#"><span class="icon-link2"></span> Link 1</a>
@@ -51,18 +52,19 @@
                   <a class="dropdown-item" href="#"><span class="icon-exit_to_app"></span> Logout</a>
                 </div>
               </li>
+              </ul>
             </div>
         </div>
     </div>
-</nav>
+    </nav>
 <!--Content-->
-<div class="main_content container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb" style="background-color: #f18900ce; color:#fff;">
-          <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-dashboard2"></span> Dashboard</a></li>
-            <li class="breadcrumb-item bread_selected"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-class"></span> My Courses</a></li>
-        </ol>
-      </nav>
+    <div class="main_content container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" style="background-color: #f18900ce; color:#fff;">
+              <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-dashboard2"></span> Dashboard</a></li>
+                <li class="breadcrumb-item bread_selected"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-class"></span> My Courses</a></li>
+            </ol>
+        </nav>
         <div class="row container login_section">
             <div class="col-12">
                 <ul class="list-group list-group-horizontal-lg">
@@ -103,5 +105,5 @@
               {% endfor %}
             </div>
         </div>
-</div>
+    </div>
 {% endblock %}

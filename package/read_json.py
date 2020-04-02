@@ -50,6 +50,8 @@ class ExamRemarks:
                                 user['submissionStatus'] += 1
                                 user['gradingStatus'] = content
                                 user['dateModified'] = dt.now().strftime("%d-%m-%Y, %I:%M %p")
+                            else:
+                                continue
 
         with open(examremarksJson_path, 'w') as f:
             json.dump(data, f, indent=4, sort_keys=True)
