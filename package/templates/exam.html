@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <!--Navigation-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a href="#" class="navbar-brand" style="color:#fff;">
+            <img src="{{ url_for('static', filename='bg.png') }}" width="120" height="80" class="d-inline-block align-top" alt="E-LEARNING">
+        </a>
+        <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" ></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" id="finder" placeholder="Enter question number" value="" aria-label="Search">
+            <a href="" onclick="this.href='#Q'+document.getElementById('finder').value" class="btn btn-outline-warning my-sm-0">
+                Goto 
+            </a>
+          </div>
+          <ul class="navbar-nav ml-md-auto">
+            <li class="nav-item">
+                <div class="form-inline my-2 my-lg-0" style="font-size: 20pt;">
+                    <span class="icon-clock-o" style="margin-right:5px;"></span>
+                    <h4 id="time" style="font-weight:bold; margin-bottom:0;">Time</h4>
+                </div>
+            </li>
+          </ul>
+          
+        </div>
+    </div>
+</nav>
+<!--Content-->
+    <div class="main_content container">
+        <form action="" method="POST" id="quizForm">
+        {% for question in  questions %}
+            <div class="row quizQuestion rounded border container" >
+                <div class=" col-12" id="{{ question['_id'] }}">
+                    <div class="my-4">
+                        <p>
+                            {{ question['_id'] }}) {{ question['description'] }}
+                        </p>
+                    </div>
+                    <div  class="quizCardForm">
+                        <div class="form-group">
+                            <div class="form-check custom-control custom-radio mt-2 rounded border quizitem">
+                                <input class="custom-control-input ml-3 quizcontrol" type="radio" name="{{ question['_id'] }}" id="{{ question['_id'] }}{{ question['alternatives'][0]['_id'] }}" value="{{ question['alternatives'][0]['_id'] }}" autofocus="">
+                                <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="{{ question['_id'] }}{{ question['alternatives'][0]['_id'] }}"><p>(A) <code>{{ question['alternatives'][0]['text'] }}</code></p></label>
+                            </div>
+                            <div class="form-check custom-control custom-radio mt-2 rounded border quizitem">
+                                <input class="custom-control-input ml-3 quizcontrol" type="radio" name="{{ question['_id'] }}" id="{{ question['_id'] }}{{ question['alternatives'][1]['_id'] }}" value="{{ question['alternatives'][1]['_id'] }}" autofocus="">
+                                <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="{{ question['_id'] }}{{ question['alternatives'][1]['_id'] }}"><p>(B) <code>{{ question['alternatives'][1]['text'] }}</code></p></label>
+                            </div>
+                            <div class="form-check custom-control custom-radio mt-2 rounded border quizitem">
+                                <input class="custom-control-input ml-3 quizcontrol" type="radio" name="{{ question['_id'] }}" id="{{ question['_id'] }}{{ question['alternatives'][2]['_id'] }}" value="{{ question['alternatives'][2]['_id'] }}" autofocus="">
+                                <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="{{ question['_id'] }}{{ question['alternatives'][2]['_id'] }}"><p>(C) <code>{{ question['alternatives'][2]['text'] }}</code></p></label>
+                            </div>
+                            <div class="form-check custom-control custom-radio mt-2 rounded border quizitem">
+                                <input class="custom-control-input ml-3 quizcontrol" type="radio" name="{{ question['_id'] }}" id="{{ question['_id'] }}{{ question['alternatives'][3]['_id'] }}" value="{{ question['alternatives'][3]['_id'] }}" autofocus="">
+                                <label class="custom-control-label d-block mx-3 mt-3 quizcontrol" for="{{ question['_id'] }}{{ question['alternatives'][3]['_id'] }}"><p>(D) <code>{{ question['alternatives'][3]['text'] }}</code></p></label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        {% endfor %}
+        
+        <div class="quizControl">
+            <button type="submit" id="exambtn" class="btn btn-outline-success">Submit</button>
+        </div>
+        </form>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{{ url_for('static', filename='js/timer.js') }}"></script>
+    <script>
+        var Seconds = {{ time }};
+    </script>
+{% endblock %}
+

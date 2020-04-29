@@ -1,0 +1,22 @@
+.quizitem {
+  transition: box-shadow .2s;
+  transition: transform .2s;
+  cursor: pointer;
+}
+.quizitem:hover {
+  box-shadow: inset 0 0 0 8px transparent;
+  transform: scale(1.01);
+}
+
+.quizcontrol {
+  cursor: pointer;
+}
+
+/*#quizCard {
+  transition: all 250ms;
+  transition-timing-function: ease-in;
+}
+
+#quizCard.ic-transitioning {
+  opacity: 0.1;
+}*/

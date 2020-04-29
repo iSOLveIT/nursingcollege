@@ -1,0 +1,32 @@
+[
+    {
+        "examCode":"5e7bf109e8554c0de33bce2d",
+        "courseCode":"INT-202",
+        "lecturerName":"Mrs. Maud Adjeley",
+        "examName": "End of First Semester (2019/2020)",
+        "datePosted": "22nd December, 2019 at 2:00am",
+        "dueDate":"04-04-2020, 05:00 PM",
+        "timeAllocated": 1,
+        "instructions":"Read the questions carefully and Choose the correct answer from the alternatives lettered A-D."
+    },
+    {
+        "examCode":"5e7bf109e8554c0de33bce2c",
+        "courseCode":"INT-202",
+        "lecturerName":"Mrs. Maud Appiah",
+        "examName": "End of Second Semester (2019/2020)",
+        "datePosted": "22nd March, 2020 at 2:00am",
+        "dueDate":"04-04-2020, 05:00 PM",
+        "timeAllocated": 30,
+        "instructions":"Choose the correct answer from the alternatives lettered A-D. Each question carries one (1) mark."
+    },
+    {
+        "examCode":"5e7bf109e8554c0de33bce2a",
+        "courseCode":"IO-12",
+        "lecturerName":"Mr. Randy Appiah",
+        "examName": "End of Second Semester (2019/2020)",
+        "datePosted": "22nd August, 2020 at 2:00pm",
+        "dueDate":"04-04-2020, 05:00 PM",
+        "timeAllocated": 30,
+        "instructions":"Choose the correct answer from the alternatives lettered A-D. Each question carries one (1) mark."
+    }
+]

@@ -1,0 +1,51 @@
+[
+    {
+        "courseCode": "INT-202",
+        "exams": [
+            {
+                "examCode": "5e7bf109e8554c0de33bce2d",
+                "participants": [
+                    {
+                        "dateModified": "02-04-2020, 05:54 PM",
+                        "gradingStatus": "95.24 out of 100",
+                        "submissionStatus": 1,
+                        "userID": "10087873"
+                    },
+                    {
+                        "dateModified": "02-04-2020, 05:24 PM",
+                        "gradingStatus": "53.81 out of 100",
+                        "submissionStatus": 1,
+                        "userID": "10087872"
+                    }
+                ]
+            },
+            {
+                "examCode": "5e7bf109e8554c0de33bce2c",
+                "participants": [
+                    {
+                        "dateModified": "",
+                        "gradingStatus": "Not Graded",
+                        "submissionStatus": 0,
+                        "userID": "10087874"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "courseCode": "IO-12",
+        "exams": [
+            {
+                "examCode": "5e7bf109e8554c0de33bce2a",
+                "participants": [
+                    {
+                        "dateModified": "",
+                        "gradingStatus": "Not Graded",
+                        "submissionStatus": "No Attempt",
+                        "userID": "10087872"
+                    }
+                ]
+            }
+        ]
+    }
+]

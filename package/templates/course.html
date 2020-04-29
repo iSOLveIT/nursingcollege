@@ -1,0 +1,102 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>Courses Page</title>
+{% endblock %}
+
+{% block content %}
+  
+  <!--Navigation-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <div class="container">
+        <a class="navbar-brand" href="/" style="color:#fff;">
+          <img src="{{ url_for('static', filename='bg.png') }}" width="120" height="80" class="d-inline-block align-top" alt="E-LEARNING">
+        </a>
+        <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" ></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" >
+              <a class="nav-link" href="/" style="color:#fff;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/dashboard/{{ session.username }}" style="color:#fff;">Dashboard</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Courses
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                {% for item in session.get('course_details') %}
+                  <a class="dropdown-item" href="/courses/{{ item['courseCode'] }}">{{ item['courseCode'] }}</a>
+                  <div class="dropdown-divider"></div>
+                {% endfor %}
+              </div>
+            </li>
+          </ul>
+
+          <div class="form-inline my-2 my-lg-0">
+              <span class="icon-user-circle-o" style="font-size: 16pt;"></span>
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown active" style="list-style: none;">
+                <a class="nav-link dropdown-toggle" href="#" style="color:#fff;" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ session.username }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                  <a class="dropdown-item" href="#"><span class="icon-link2"></span> Link 1</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"><span class="icon-settings"></span> Preferrences</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"><span class="icon-exit_to_app"></span> Logout</a>
+                </div>
+              </li>
+              </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+  <!--Content-->
+    <div class="main_content container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" style="background-color: #f18900ce; color:#fff;">
+              <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-dashboard2"></span> Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-class"></span> My Courses</a></li>
+                <li class="breadcrumb-item bread_selected"><a href="#" style="text-decoration:none; color:#fff;"><span class="icon-book"></span> {{ course['courseCode'] }}</a></li>
+            </ol>
+        </nav>
+        <div class="row container login_section">
+            <div class="col-12">
+                <h2>Welcome</h2>
+                <p class="card-text">
+                  {{ course['description'] }}
+                </p>
+            </div>
+        </div>
+        <div class="quizQuestion rounded border container mt-3">
+            <div class="row">
+                <div class="col card-header border" style="font-size: 16pt; font-weight: bolder;">
+                    <span class="icon-menu"></span>
+                    {{ course['courseName'] }} Examination 
+                  </div>
+            </div>
+
+            <div class="row ">
+              {% for item in course_exam %}
+                {% if item['courseCode'] == course_code %}
+                  <div class="col">
+                    <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title"><a href="/courses/{{ item['courseCode'] }}/examdetails/{{ item['examCode'] }}" style="color:#000033;">{{ item['examName'] }}</a></h5>
+                              <p class="card-text">{{ item['lecturerName'] }}</p>
+                              <p class="card-text"><small class="text-muted">{{ item['datePosted'] }}</small></p>
+                            </div>
+                      </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
