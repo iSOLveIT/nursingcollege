@@ -185,8 +185,8 @@ class ExamEndpoint(MethodView):
         Returns:
             str -- The calculated marks for the exam
         """
-        examCode = exam_code
-        courseCode = course_code
+        exam_code = exam_code
+        course_code = course_code
         total_questions = [len(exam['questions']) for exam in question_db() if exam['examCode'] == exam_code]
 
         question_in_range = list(range(1, total_questions[0] + 1))
@@ -217,27 +217,6 @@ class ExamEndpoint(MethodView):
         decoded_msg = encoded_msg.decode('ascii')
         """
         return redirect(url_for('examdetails',
-                                course_code=courseCode,
-                                exam_code=examCode))
+                                course_code=course_code,
+                                exam_code=exam_code))
 
-
-'''
-class ExamMarkingEndpoint(MethodView):
-
-    """View for Exam Marking Route
-    
-    Arguments:
-        MethodView -- If you implement a request method (like POST), it will be used to handle POST requests.
-    
-    Returns:
-        none
-    """
-
-    def post(self):
-        """This function executes when request method for this route = post
-        
-        Returns:
-            str -- The marks for the exam
-        """
-        return redirect(url_for('show', results='contact-section'))
-'''
