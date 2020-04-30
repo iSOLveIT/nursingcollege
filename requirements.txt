@@ -3,5 +3,3 @@ Flask-Session
 gunicorn
 requests
 Werkzeug==0.16.0
-wily
-
