@@ -7,7 +7,7 @@ def ocr(exam_code, results, num_questions):
     Arguments:
         exam_code {[str]} -- [The code of the exam to be marked]
         results {[dict]} -- [The answers of the questions answers by user]
-        results {[int]} -- [The total number of the questions in an exam]
+        num_questions {[int]} -- [The total number of the questions in an exam]
 
     Returns:
         [str] -- [The marks the user had in the exam]
