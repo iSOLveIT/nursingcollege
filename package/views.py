@@ -6,9 +6,6 @@ from flask import render_template, request, redirect, url_for, flash, session
 from package.read_json import course_db, question_db, examdetail_db, ExamRemarks
 from package.helpers import ocr
 
-# Built-in modules
-import base64
-
 
 class IndexEndpoint(MethodView):
     """View for Index Route
@@ -17,7 +14,7 @@ class IndexEndpoint(MethodView):
         MethodView -- If you implement a request method (like GET), it will be used to handle GET requests.
     
     Returns:
-        none
+        get() method
     """
 
     @staticmethod
@@ -28,10 +25,6 @@ class IndexEndpoint(MethodView):
             html template -- renders html template
         """
         return render_template('index.html', quiz=False), 200
-    # This function executes when request method for this route = post
-
-    # def post(self):
-    # return redirect(url_for('index', _anchor='contact-section'))
 
 
 class DashboardEndpoint(MethodView):
@@ -41,7 +34,7 @@ class DashboardEndpoint(MethodView):
         MethodView -- If you implement a request method (like GET), it will be used to handle GET requests.
     
     Returns:
-        none
+        get() method
     """
 
     @staticmethod
@@ -71,7 +64,7 @@ class CoursesEndpoint(MethodView):
         MethodView -- If you implement a request method (like GET), it will be used to handle GET requests.
     
     Returns:
-        none
+        get() method
     """
 
     @staticmethod
@@ -104,7 +97,7 @@ class ExamdetailsEndpoint(MethodView):
         MethodView -- If you implement a request method (like GET), it will be used to handle GET requests.
     
     Returns:
-        none
+        get() method
     """
 
     @staticmethod
@@ -153,7 +146,7 @@ class ExamEndpoint(MethodView):
         MethodView -- If you implement a request method (like GET), it will be used to handle GET requests.
     
     Returns:
-        none
+        get() and post() methods
     """
 
     @staticmethod
@@ -210,13 +203,7 @@ class ExamEndpoint(MethodView):
                               exam_code=examCode,
                               user_id=session.get('username'),
                               content=ocr_results)
-
-        """
-        message_bytes = ocr_results.encode('ascii')
-        encoded_msg = base64.b64encode(message_bytes)
-        decoded_msg = encoded_msg.decode('ascii')
-        """
+        
         return redirect(url_for('examdetails',
                                 course_code=course_code,
                                 exam_code=exam_code))
-
