@@ -55,15 +55,3 @@ class ExamRemarks:
 
         with open(examremarksJson_path, 'w') as f:
             json.dump(data, f, indent=4, sort_keys=True)
-
-    
-
-"""
-#data = course_db()
-#with open(json_path, 'w') as file:
-    #for item in data:
-     #   item.update(username="Tetteh Lord")
-    #json.dump(data, file, indent=2, sort_keys=True)
-#print(len(data[0]))
-#print(examdetail_db())
-"""
