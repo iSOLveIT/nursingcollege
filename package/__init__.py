@@ -6,7 +6,7 @@ from flask_session import Session
 app = Flask(__name__)
 
 # Check Configuration section for more details
-SESSION_COOKIE_NAME = "pantangcollege"
+SESSION_COOKIE_NAME = "name_for_cookie"
 SESSION_TYPE = 'filesystem'
 SESSION_COOKIE_HTTPONLY = False
 SESSION_KEY_PREFIX = 'pcollege'
