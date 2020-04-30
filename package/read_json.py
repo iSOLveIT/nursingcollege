@@ -11,34 +11,63 @@ examremarksJson_path = directory + '/examremarks.json'
 
 
 def course_db():
+    """This function reads data from a json file
+        
+        Returns:
+            content {[dict}] - A python object that contains the json data from the file
+        """
+    
     with open(courseJson_path, 'r') as f:
         content = json.load(f)
     return content
 
 
 def question_db():
+    """This function reads data from a json file
+        
+        Returns:
+            content {[dict}] - A python object that contains the json data from the file
+        """
+    
     with open(questionJson_path, 'r') as f:
         content = json.load(f)
     return content
 
 
 def examdetail_db():
+    """This function reads data from a json file
+        
+        Returns:
+            content {[dict}] - A python object that contains the json data from the file
+    """
+    
     with open(examdetailJson_path, 'r') as f:
         content = json.load(f)
     return content
 
 
 class ExamRemarks:
-    """This class contains methods for showing and updating participants data for exam
-    """
+    
     @staticmethod
     def showremarks():
+        """This function reads data from a json file
+        
+        Returns:
+            content {[dict}] - A python object that contains the json data from the file
+        """
+        
         with open(examremarksJson_path, 'r') as f:
             content = json.load(f)
         return content
 
     @staticmethod
     def updateremarks(course_code, exam_code, user_id, content):
+        """This function write data into a json file
+        
+        Returns:
+           None
+        """
+        
         data = ExamRemarks.showremarks()
 
         for item in data:
