@@ -12,6 +12,7 @@ def ocr(exam_code, results, num_questions):
     Returns:
         [str] -- [The marks the user had in the exam]
     """
+    
     questionDB = question_db()
 
     answers = []
