@@ -5,8 +5,6 @@ from package import app
 # Third-party modules
 from flask import request
 
-# Built-in modules
-import base64
 
 # Route for Index
 app.add_url_rule("/", view_func=IndexEndpoint.as_view("index"))
@@ -22,14 +20,3 @@ app.add_url_rule("/courses/<string:course_code>/examdetails/<string:exam_code>",
 
 # Route for Exam
 app.add_url_rule("/courses/<string:course_code>/examdetails/<string:exam_code>/exam", view_func=ExamEndpoint.as_view("exam"))
-
-"""
-# Test
-@app.route("/show")
-def show():
-    results = str(request.args['results'])
-    message_bytes = results.encode('ascii')
-    encoded_msg = base64.b64decode(message_bytes)
-    decoded_msg = encoded_msg.decode('ascii')
-    return f"<h1> {decoded_msg} </h1>"
-"""
