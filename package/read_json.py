@@ -64,8 +64,13 @@ class ExamRemarks:
     def updateremarks(course_code, exam_code, user_id, content):
         """This function write data into a json file
         
+        Arguments:
+            course_code {[str]} - The code of a course
+            exam_code {[str]} - The code of an exam
+            user_id {[int]} - The id of a student
+            content {[str]} - A statement containing the marks a student had
         Returns:
-           None
+            None
         """
         
         data = ExamRemarks.showremarks()
