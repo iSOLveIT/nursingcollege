@@ -54,4 +54,4 @@ README TEMPLATE
 * __Duodu Randy :octocat:__
 
 ### Date Created
-* _E.g. Friday, 13th March, 2020_
+* _Friday, 13th March, 2020_
