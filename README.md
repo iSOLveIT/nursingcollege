@@ -28,7 +28,7 @@ README TEMPLATE
 * The app shows students only due exams
 
 
-## How the app was designed to achieve that?
+## How the app was designed?
 * The app was designed with the Python web framework called Flask. 
 * The app was designed as a package to make the code maintainable.
 * The app used the Django MVC architecture by having a different files for holding both the views (views.py) and routes (routes.py in Django known as url.py)
